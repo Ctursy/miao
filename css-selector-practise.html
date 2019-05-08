@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <!-- <meta http-equiv="Refresh" content="1" /> -->
+    <style>
+      /* body :nth-child(1){
+        color: red
+      } */
+      body>p{
+        color: red
+      }
+      [tabindex="-1"]:hover{
+        color: red
+      }
+      [tabindex="-1"]:active{
+        color: green
+      }
+      [tabindex="-1"]:focus{
+        color: blue
+      }
+      a:link{
+        color: pink
+      }
+      a:visited{
+        color: orange
+      }
+      a[href*="@"]{
+        color: blue
+      }
+      a[href^="tel"]{
+        color: yellow
+      }
+      a[href$="pdf" i]{
+        font-size: 30px
+      }
+      .a ul :nth-child(n+4):nth-child(-n+7){
+        color: red
+      }
+      .b ul :nth-child(-n+25){
+        color:red
+      }
+      .b ul :nth-child(n+35):nth-child(-n+50){
+        color:blue
+      }
+      .b ul :nth-child(n+65){
+        color:green
+      }
+      .prime ul :nth-child(-n+1){
+        color: green;
+        font-weight: 600
+      }
+      .prime ul :nth-child(2n):nth-child(n+3){
+        color: orangered
+      }
+      .prime ul :nth-child(3n):nth-child(n+4){
+        color: orangered
+      }
+      .prime ul :nth-child(5n):nth-child(n+5){
+        color: orangered
+      }
+      .prime ul :nth-child(7n):nth-child(n+7){
+        color: orangered
+      }
+      /* YOUR STYLE GOES HERE */
+      /* 不得改变页面的任何html结构 */
+    </style>
+  </head>
+
+  <body>
+    <p>红色</p>
+
+    <p class="a" tabindex="-1">鼠标悬浮时为红色，按下去时为绿色，获得焦点时为蓝色</p>
+
+    <p class="a c">
+      <span>
+        红色
+        <span>绿色</span>
+        <span>蓝色</span>
+      </span>
+    </p>
+
+    <div>
+      <p>
+        如下：
+        让已访问的链接为橙色（orange） <br>
+        让未访问的链接为粉色（pink） <br>
+        让所有邮件的链接为蓝色 <br>
+        播打电话的链接为黄色<br>
+        下载pdf的链接字号为30px<br>
+      </p>
+      <a href="https://www.mi.com/">mi</a>
+      <a href="https://www.jd.com/">jd</a>
+      <a href="https://www.lksdjfwief.com/">你肯定没访问过我</a>
+      <a href="MAILTO:a@b.com">给我发邮件</a>
+      <a href="mailto:a@b.com">给我发邮件</a>
+      <a href="tel:12345678">给我打电话</a>
+      <a href="tel:12345678">给我打电话</a>
+      <a href="aaa.pdf">下载pdf</a>
+      <a href="aaa.PDF">下载pdf</a>
+    </div>
+
+    <style>
+        /* .a ul li:nth-child(n + 4):nth-child(-n + 7) {
+            color: red;
+        } */
+    </style>
+    <div class="a">
+      <p>让下面的4567元素为红色</p>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="b">
+      <p>让25及以内的元素为红色</p>
+      <p>让65及以上的元素为绿色</p>
+      <p>让35-50的元素为蓝色</p>
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li>32</li>
+        <li>33</li>
+        <li>34</li>
+        <li>35</li>
+        <li>36</li>
+        <li>37</li>
+        <li>38</li>
+        <li>39</li>
+        <li>40</li>
+        <li>41</li>
+        <li>42</li>
+        <li>43</li>
+        <li>44</li>
+        <li>45</li>
+        <li>46</li>
+        <li>47</li>
+        <li>48</li>
+        <li>49</li>
+        <li>50</li>
+        <li>51</li>
+        <li>52</li>
+        <li>53</li>
+        <li>54</li>
+        <li>55</li>
+        <li>56</li>
+        <li>57</li>
+        <li>58</li>
+        <li>59</li>
+        <li>60</li>
+        <li>61</li>
+        <li>62</li>
+        <li>63</li>
+        <li>64</li>
+        <li>65</li>
+        <li>66</li>
+        <li>67</li>
+        <li>68</li>
+        <li>69</li>
+        <li>70</li>
+        <li>71</li>
+        <li>72</li>
+        <li>73</li>
+        <li>74</li>
+        <li>75</li>
+        <li>76</li>
+        <li>77</li>
+        <li>78</li>
+        <li>79</li>
+        <li>80</li>
+        <li>81</li>
+        <li>82</li>
+        <li>83</li>
+        <li>84</li>
+        <li>85</li>
+        <li>86</li>
+        <li>87</li>
+        <li>88</li>
+        <li>89</li>
+        <li>90</li>
+        <li>91</li>
+        <li>92</li>
+        <li>93</li>
+        <li>94</li>
+        <li>95</li>
+        <li>96</li>
+        <li>97</li>
+        <li>98</li>
+        <li>99</li>
+        <li>100</li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <div class="prime">
+      <p>让所有的质/素数(prime)（2，3，5，7，11，13……）跟合数（4，6，8，9，10……）为不同的颜色</p>
+      nth-child(3n)
+      <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+        <li>32</li>
+        <li>33</li>
+        <li>34</li>
+        <li>35</li>
+        <li>36</li>
+        <li>37</li>
+        <li>38</li>
+        <li>39</li>
+        <li>40</li>
+        <li>41</li>
+        <li>42</li>
+        <li>43</li>
+        <li>44</li>
+        <li>45</li>
+        <li>46</li>
+        <li>47</li>
+        <li>48</li>
+        <li>49</li>
+        <li>50</li>
+        <li>51</li>
+        <li>52</li>
+        <li>53</li>
+        <li>54</li>
+        <li>55</li>
+        <li>56</li>
+        <li>57</li>
+        <li>58</li>
+        <li>59</li>
+        <li>60</li>
+        <li>61</li>
+        <li>62</li>
+        <li>63</li>
+        <li>64</li>
+        <li>65</li>
+        <li>66</li>
+        <li>67</li>
+        <li>68</li>
+        <li>69</li>
+        <li>70</li>
+        <li>71</li>
+        <li>72</li>
+        <li>73</li>
+        <li>74</li>
+        <li>75</li>
+        <li>76</li>
+        <li>77</li>
+        <li>78</li>
+        <li>79</li>
+        <li>80</li>
+        <li>81</li>
+        <li>82</li>
+        <li>83</li>
+        <li>84</li>
+        <li>85</li>
+        <li>86</li>
+        <li>87</li>
+        <li>88</li>
+        <li>89</li>
+        <li>90</li>
+        <li>91</li>
+        <li>92</li>
+        <li>93</li>
+        <li>94</li>
+        <li>95</li>
+        <li>96</li>
+        <li>97</li>
+        <li>98</li>
+        <li>99</li>
+        <li>100</li>
+      </ul>
+    </div>
+    <script></script>
+  </body>
+</html>

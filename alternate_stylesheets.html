@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Alternate</title>
+    <style>
+    #box{
+        width: 100px;
+        height: 100px;
+        border: solid 2px #000;
+        border-radius: 5px;
+        margin: 10px;
+        float: left;
+        /* background-color: #fff */
+    }
+    [class^="bs-"]{
+        background: #e1e7eb
+    }
+    [class*=" bs-"]{
+        background: #555
+    }
+    [class$="-ui"],[class*="-ui "]{
+        background-color: #999
+    }
+    div[title="a"].bar.baz#foo[value="b"] > .foo.bar[a="b"] + span ~ a{
+        background: #ddd
+    }
+    </style>
+    <!-- <link rel="stylesheet" href="./bule.css"> -->
+    <!-- <link rel="alternate stylesheet" href="./red.css"> -->
+    
+</head>
+<body>
+    <div id="box" class="bs-body box1">
+
+    </div>
+    <div id="box" class="box2 bs-body">
+
+    </div>
+    <div id="box" class="box3 head-ui">
+
+    </div>
+    <div id="box" class="box3 head-ui sdf">
+
+    </div>
+    <div id="foo" title="a"  class="bar baz" value='b'>
+        <div class="foo bar" a="b"></div>
+        <span></span>
+        <a href="" id="box"></a>
+        <a href="" id="box"></a>
+    </div>
+</body>
+</html>
