@@ -9,7 +9,7 @@
       /* body :nth-child(1){
         color: red
       } */
-      body>p{
+      body>:first-child{
         color: red
       }
       [tabindex="-1"]:hover{
@@ -35,6 +35,15 @@
       }
       a[href$="pdf" i]{
         font-size: 30px
+      }
+      .c >span{
+        color: red
+      }
+      .c >span :first-child{
+        color: green
+      }
+      .c >span :last-child{
+        color: blue
       }
       .a ul :nth-child(n+4):nth-child(-n+7){
         color: red
