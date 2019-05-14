@@ -1,55 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alternate</title>
     <style>
-    #box{
-        width: 100px;
-        height: 100px;
-        border: solid 2px #000;
-        border-radius: 5px;
-        margin: 10px;
-        float: left;
-        /* background-color: #fff */
-    }
-    [class^="bs-"]{
-        background: #e1e7eb
-    }
-    [class*=" bs-"]{
-        background: #555
-    }
-    [class$="-ui"],[class*="-ui "]{
-        background-color: #999
-    }
-    div[title="a"].bar.baz#foo[value="b"] > .foo.bar[a="b"] + span ~ a{
-        background: #ddd
-    }
+        body {
+            background-color: #eee
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            border: solid 2px #000;
+            border-radius: 5px;
+            margin: 10px;
+            float: left;
+            /* background-color: #fff */
+        }
+
+        [class^="bs-"] {
+            background: #e1e7eb
+        }
+
+        [class*=" bs-"] {
+            background: #555
+        }
+
+        [class$="-ui"],
+        [class*="-ui "] {
+            background-color: #999
+        }
+
+        div[title="a"].bar.baz#foo[value="b"]>.foo.bar[a="b"]+span~a {
+            background: #ddd
+        }
+
+        div#box:hover {
+            box-shadow: 0 0 5px 1px #000;
+            cursor: pointer;
+
+        }
+
+        body>div>div:first-child {
+            /* transform: rotate(30deg); */
+            /* animation: truns 5s linear forwards ; */
+            /* transform:rotateY(30deg) */
+        }
+
+        @keyframes truns {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        body>div>div:first-child:hover {
+            animation: turns 5s ease-out forwards;
+        }
+
+        p.p1 {
+            color: rgb(0%, 0%, 0%)
+        }
+
+        p.p2 {
+            color: rgb(20%, 20%, 20%)
+        }
+
+        p.p3 {
+            color: rgb(40%, 40%, 40%)
+        }
+
+        p.p4 {
+            color: rgb(60%, 60%, 60%)
+        }
+
+        p.p5 {
+            color: rgb(80%, 80%, 80%)
+        }
+
+        p.p6 {
+            color: rgb(0, 0, 0)
+        }
+
+        p.p7 {
+            color: rgb(51, 51, 51)
+        }
+
+        p.p8 {
+            color: rgb(102, 102, 102)
+        }
+
+        p.p9 {
+            color: rgb(153, 153, 153)
+        }
+
+        p.p10 {
+            color: rgb(204, 204, 204)
+        }
+
+        .justify ul {
+            list-style: none
+        }
+
+        .justify ul li {
+            text-align: justify;
+            width: 100px;
+            line-height: 16px;
+            height: 32px;
+        }
+
+        .justify ul li span {
+            display: inline-block;
+            width: 100%;
+            height: 0px;
+        }
+        .p4{
+            text-indent: 2em;
+            text-align:justify;
+            width: 450px;
+           
+        }
+        .p4 span{
+            display: inline-block;
+            width: 100%;
+            height: 0px;
+        }
     </style>
     <!-- <link rel="stylesheet" href="./bule.css"> -->
     <!-- <link rel="alternate stylesheet" href="./red.css"> -->
-    
+
 </head>
+
 <body>
-    <div id="box" class="bs-body box1">
+    <div>
+
+        <div id="box" class="bs-body box1">
+
+        </div>
+        <div id="box" class="box2 bs-body">
+
+        </div>
+        <div>
+            <div id="box" class="box3 head-ui">
+
+            </div>
+            <div id="box" class="box3 head-ui sdf">
+
+            </div>
+        </div>
+
+        <div id="foo" title="a" class="bar baz" value='b'>
+            <div class="foo bar" a="b"></div>
+            <span></span>
+            <a href="" id="box"></a>
+            <a href="" id="box"></a>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+    <div>
+        <p class="p1">[001] Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, corrupti velit nostrum
+            nulla
+            quod, possimus pariatur quidem libero aut nisi quis. Rerum ea minus adipisci architecto totam facilis,
+            numquam sint?</p>
+        <p class="p2">[002] Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, corrupti velit nostrum
+            nulla
+            quod, possimus pariatur quidem libero aut nisi quis. Rerum ea minus adipisci architecto totam facilis,
+            numquam sint?</p>
+        <p class="p3">[003] Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, corrupti velit nostrum
+            nulla
+            quod, possimus pariatur quidem libero aut nisi quis. Rerum ea minus adipisci architecto totam facilis,
+            numquam sint?</p>
+        <p class="p4">[004] Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, corrupti velit nostrum
+            nulla
+            quod, possimus pariatur quidem libero aut nisi quis. Rerum ea minus adipisci architecto totam facilis,
+            numquam sint?<span></span></p>
 
     </div>
-    <div id="box" class="box2 bs-body">
-
+    <div class="justify">
+        <ul>
+            <li>姓名<span></span></li>
+            <li>兴趣爱好<span></span></li>
+            <li>性取向<span></span></li>
+        </ul>
     </div>
-    <div id="box" class="box3 head-ui">
-
-    </div>
-    <div id="box" class="box3 head-ui sdf">
-
-    </div>
-    <div id="foo" title="a"  class="bar baz" value='b'>
-        <div class="foo bar" a="b"></div>
-        <span></span>
-        <a href="" id="box"></a>
-        <a href="" id="box"></a>
+    <div style="background:#555;height:200px">
+        <p style="color:#fff">[004] Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, corrupti velit nostrum
+            nulla
+            quod, possimus pariatur quidem libero aut nisi quis. Rerum ea minus adipisci architecto totam facilis,
+            numquam sint?
+        </p>
+        <p style="text-decoration:underline;color:#fff">
+            ppppppppppppppppppppppppppppppppppppppppppppp
+        </p>
     </div>
 </body>
+<script>
+
+</script>
+
 </html>
