@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vscode.css">
+</head>
+
+<body>
+    <div class="content">
+        <!-- <div class="window">
+                    <div class="heart heart_1"></div>
+                </div>
+                <div class="window">
+                    <div class="heart heart_2"></div>
+                </div> -->
+        <div class="window">
+            <div class="heart heart_3"></div>
+        </div>
+        <div class="window">
+            <div class="heart heart_4" onclick="addClass(this)"> </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    function addClass(dom) {
+        if (dom.classList.contains('heart_4_like')) {
+            setTimeout(() => {
+                dom.classList.add('heart_4_cancellike')
+                dom.classList.remove('heart_4_like');
+            }, 0);
+        } else {
+            setTimeout(() => {
+                dom.classList.add('heart_4_like');
+            }, 0);
+            dom.classList.remove('heart_4_cancellike');
+        }
+    }
+</script>
