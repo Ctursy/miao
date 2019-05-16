@@ -1,0 +1,377 @@
+*{
+    margin:0;
+    padding: 0;
+   
+}
+body{
+    background: #222
+}
+ul{
+    list-style: none
+}
+
+.header{
+    width: 100%;
+    min-width: 850px;
+    height: 50px;
+    background: #333;
+    margin: 0;
+    position: relative;
+    z-index: 9999;
+    /* overflow: hidden; */
+}
+
+.header i{
+    width: 50px;
+    height: 50px;
+    display: block;
+    background: url('./logo.png') no-repeat;
+    background-size: 60% 60%;
+    background-position: 10px 10px;
+    float: left;
+   
+}
+
+.list1 li{
+    float: left;
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    color: #ccc;
+    
+  
+}
+.list1 li:hover .list2{
+    display:block;
+   
+}
+.list2{
+    width: 300px;
+    background: #222;
+    box-shadow: 1px 1px 5px #000;
+    display: none;
+    /* padding:10px 20px; */
+
+}
+.list2 li{
+    height: 50px;
+    width: 300px;
+    line-height: 30px;
+    text-align: left;
+    color: #ccc;
+    box-sizing: border-box;
+    padding: 5px 0;
+    position: relative;
+   
+}
+.list2 li{
+    padding: 10px;
+    /* height: 40px */
+
+}
+.header ul li:hover{
+    background: #777;
+    cursor: pointer;
+}
+    
+.list2>li:nth-child(1)::after{
+    content: 'Ctrl+N';
+    position: relative;
+    float: right;
+    right: 10px;
+
+}
+.list2>li:nth-child(2)::after{
+    content: 'Ctrl+Shift+N';
+    position: relative;
+    float: right;
+    right: 10px;
+   
+}
+.list2>li:nth-child(3)::after{
+    content: 'Ctrl+O';
+    position: relative;
+    float: right;
+    right: 10px;
+   
+}
+.list2>li:nth-child(4)::after{
+    content: 'Ctrl+K Ctrl+O';
+    position: relative;
+    float: right;
+    right: 10px;
+   
+}
+.list2 li:nth-child(2){
+    border-bottom: 1px solid #ccc 
+}
+.list2 li:nth-child(10){
+    border-bottom: 1px solid #ccc 
+}
+.list2 li:nth-child(8)::after{
+    content: '>';
+    position: relative;
+    float: right;
+    right: 10px;
+    /* border-bottom: 1px solid #ccc  */
+}
+
+.list3{
+    position: absolute;
+    left: 300px;
+    top: 0;
+    width: 300px;
+    /* padding:10px 20px; */
+    background: #222;
+    box-shadow: 1px 1px 5px #000;
+    display: none
+}
+#save_folder:hover .list3{
+    display: block
+}
+/* -------------------------------------------------------- */
+.content{
+    z-index: 10;
+}
+.window{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    margin: 10px auto;
+    float: left;
+    margin-right: 20px
+    /* z-index: 10; */
+}
+.heart{
+    background: url('./web_heart_animation_edge.png');
+    background-size: 100% 100%;
+    width: 2900px;
+    height: 100px;
+    position: absolute;
+    left: -2800px;
+    cursor: pointer;
+}
+.heart_1:hover{
+    animation: .5s like steps(28) reverse ;
+}
+.heart_2:hover{
+    animation: .5s like steps(28) alternate ;
+}
+.heart_3{
+    animation: 1s like steps(28) alternate forwards infinite;
+}
+.heart_4{
+    left: 0;
+}
+.heart_4_like{
+    animation: .5s like steps(28) forwards  ;
+}
+.heart_4_cancellike{
+    animation: .5s unlike steps(28) forwards;
+}
+@keyframes unlike{
+    0%{left: -2800px;}
+    100%{left:0px;}
+}
+@keyframes like{
+    0%{left: 0px;}
+    100%{left:-2800px;}
+}
+.check_lable{
+    width: 100px;
+    height: 50px;
+    display: block;
+    /* box-shadow: 1px 1px 5px  #000; */
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgb(110, 211, 94);
+
+}
+#checked{
+    display: none
+}
+#checked:checked+.check_lable{
+    /* box-shadow: -1px -1px 5px  #000; */
+    background: #aaa
+}
+#checked:checked+.check_lable .circle{
+    box-shadow: -1px 1px 5px  #000;
+    position: absolute;
+    /* background: red; */
+    left: 52px;
+    transition: .5s
+}
+.check_lable .circle{
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    transition: .5s
+}
+.check_lable .circle{
+    width: 42px;
+    height: 42px;
+    background: #fff;
+    border-radius: 50%;
+  
+    box-shadow: 1px -1px 5px  #000;
+ 
+}
+/* _____________________________banner______________________________ */
+
+.banner{
+    width:100%;
+    height: 460px;
+    position: relative;
+}
+.banner .package{
+    width: 1226px;
+    height: 460px;
+    position: relative;
+    margin: 0 auto;
+    background: #ccc;
+  
+    overflow: hidden;
+}
+
+.banner .package .img_list{
+    width:calc(1226px * 5);
+    height: 460px;
+    position: absolute;
+    left: 0px;
+    top: 0px
+}
+.banner .package .img_list .img_box{
+    width: 1226px;
+    height: 460px;
+    margin: 0 auto;
+    float: left;
+}
+.banner .package .img_list .img_box img{
+    width: 100%;
+    height: 100%
+}
+
+.banner .package .redio_list{
+    display: block;
+    width: 20px;
+    height: 20px;
+
+}
+
+.package input[type="radio"]{
+    width: 15px;
+    height: 15px;
+    padding: 2.5px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99
+}
+
+#img1,.img1{
+    position: absolute;
+    right: 180px;
+    bottom: 10px
+}
+#img2,.img2{
+    position: absolute;
+    right: 150px;
+    bottom: 10px
+}
+#img3,.img3{
+    position: absolute;
+    right: 120px;
+    bottom: 10px
+}
+#img4,.img4{
+    position: absolute;
+    right: 90px;
+    bottom: 10px
+}
+#img5,.img5{
+    position: absolute;
+    right: 60px;
+    bottom: 10px
+}
+
+#img2:checked ~.img_list{
+    position: absolute;
+    left: -1226px;
+    transition: 1s;
+}
+#img3:checked ~.img_list{
+    position: absolute;
+    left:calc(-1226px * 2) ;
+    transition: 1s;
+}
+#img4:checked ~.img_list{
+    position: absolute;
+    left:calc(-1226px * 3) ;
+    transition: 1s;
+}
+#img5:checked ~.img_list{
+    position: absolute;
+    left:calc(-1226px * 4) ;
+    transition: 1s;
+}
+#img1:checked ~.img_list{
+    position: absolute;
+    left:0;
+    transition: 1s;
+}
+.left_shadow{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 460px;
+    background: rgba(0, 0, 0, .5);
+    z-index: 999
+}
+#img1,#img2,#img3,#img4,#img5{
+    display: none
+}
+.radio_lable{
+    background:rgba(111, 111, 111, .5);
+    border-radius: 50%;
+    z-index: 999;
+    cursor: pointer;
+   
+}
+.radio_lable:hover>.dot{
+    background: #fff
+}
+.dot{
+    width: 14px;
+    height: 14px;
+    margin: 3px;
+    border-radius: 50%; 
+    transition: .5s
+}
+
+#img2:checked ~.img2 .dot{
+    background: #fff;
+    /* opacity: .8; */
+    
+}
+#img3:checked ~.img3 .dot{
+    background: #fff;
+    /* opacity: .8; */
+}
+#img4:checked ~.img4 .dot{
+    background: #fff;
+    /* opacity: .8; */
+}
+#img5:checked ~.img5 .dot{
+    background: #fff;
+    /* opacity: .8; */
+}
+#img1:checked ~.img1 .dot{
+    background: #fff;
+    /* opacity: .8; */
+}

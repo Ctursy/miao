@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var at = 1
+    var compare = function(str_arr){
+       
+        for(let i in str_arr){
+            if( str_arr[i].slice(0,at)==str_arr[0].slice(0,at)){
+                if( i == str_arr.length-1){
+                    ++at
+                    compare(str_arr)
+                }
+            }else{
+                console.log(str_arr[0].slice(0,at-1))
+                return str_arr[0].slice(0,at-1)
+            }
+        }
+        return str_arr[0].slice(0,at-1)
+    }
+  
+ console.log(compare(["fliower","fliow","flight","flight"]))
+</script>
