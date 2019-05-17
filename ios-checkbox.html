@@ -1,21 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./vscode.css">
+    <style>
+        body {
+            width: 100%
+        }
+
+        .window {
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .check_lable {
+            width: 100px;
+            height: 50px;
+            display: block;
+            /* box-shadow: 1px 1px 5px  #000; */
+            border-radius: 50px;
+            cursor: pointer;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgb(110, 211, 94);
+
+        }
+
+        #checked {
+            display: none
+        }
+
+        #checked:checked+.check_lable {
+            /* box-shadow: -1px -1px 5px  #000; */
+            /* background: #aaa */
+        }
+
+        #checked:checked+.check_lable .circle {
+          
+        }
+        .check_lable .gary{
+            width: 0px;
+            height:0px;
+            position: absolute;
+            margin-left: 50%;
+            margin-top: 25%;
+            transform: translate(-50%,-50%);
+            /* left: 2px;
+            top: 2px; */
+            border-radius:46px;
+            z-index: 9;
+            background: #eee
+        }
+        .check_lable .circle {
+     
+            width: 42px;
+            height: 42px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 1px -1px 5px #000;
+            position: absolute;
+            left: 4px;
+            top: 4px;
+            z-index: 10;
+        }
+        @keyframes btn_on{
+            0%{box-shadow: 1px -1px 5px #000; width: 42px;}
+            50%{box-shadow: 0px 0px 5px #000; width: 64px;}
+            100%{box-shadow: 1px -1px 5px #000; left: 52px; width: 42px}
+        }
+        @keyframes btn_un{
+            0%{box-shadow: 1px -1px 5px #000; left: 52px; width: 42px}
+            50%{box-shadow: 0px 0px 5px #000; width: 64px;}
+            100%{box-shadow: 1px -1px 5px #000; width: 42px;}
+        }
+        @keyframes background_on{
+            0%{ background: rgb(110, 211, 94);}
+            100%{ background: #aaa}
+        }
+        @keyframes background_un{
+            100%{ background: #aaa}
+            0%{ background: rgb(110, 211, 94);}
+        }
+        @keyframes gary_on{
+             0%{  width: 0; height: 0px;}
+            100%{  width: 96px; height: 46px; }
+        }
+        @keyframes gary_un{
+            0%{  width: 96px; height: 46px; }
+            100%{  width: 0; height: 0px;}
+          
+        }
+        .background_on{
+            animation: background_on .5s forwards ease
+        }
+        .background_un{
+            animation: background_un .5s forwards ease
+        }
+        .btn_on{
+            animation: btn_on .3s forwards;
+        }
+        .btn_un{
+            animation: btn_un .3s forwards;
+        }
+        .gary_on{
+            animation: gary_on .2s forwards;
+        }
+        .gary_un{
+            animation: gary_un .2s forwards;
+        }
+    </style>
 </head>
+
 <body>
     <div class="window btn_IOS">
-        <input type="checkbox" name="checked" id="checked">
-        <label class="check_lable" for="checked">
+        <input type="checkbox" name="checked" id="checked" checked>
+        <label class="check_lable" for="checked" onclick="addClass('checked','check_lable','gary','circle')">
+            <div class="gary">
+
+            </div>
             <div class="circle">
 
             </div>
-        </label> 
-        
+        </label>
+
     </div>
 </body>
+
 </html>
+<script>
+    function addClass(input_id,lable_class,gary_class,circle_class) {
+        var dom = document.getElementById(input_id)
+        var lable = document.getElementsByClassName(lable_class)[0]
+        var gary = document.getElementsByClassName(gary_class)[0]
+        var circle = document.getElementsByClassName(circle_class)[0]
+
+        if (dom.checked) {
+            setTimeout(() => {
+                lable.classList.add('background_on')
+                lable.classList.remove('background_un');
+
+
+                gary.classList.add('gary_on')
+                gary.classList.remove('gary_un');
+
+                circle.classList.add('btn_on')
+                circle.classList.remove('btn_un');
+            }, 0);
+        } else {
+            setTimeout(() => {
+                lable.classList.add('background_un')
+                lable.classList.remove('background_on');
+
+
+                gary.classList.add('gary_un')
+                gary.classList.remove('gary_on');
+
+                circle.classList.add('btn_un')
+                circle.classList.remove('btn_on');
+            }, 0);
+        }
+    }
+</script>

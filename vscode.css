@@ -180,48 +180,7 @@ ul{
     0%{left: 0px;}
     100%{left:-2800px;}
 }
-.check_lable{
-    width: 100px;
-    height: 50px;
-    display: block;
-    /* box-shadow: 1px 1px 5px  #000; */
-    border-radius: 50px;
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgb(110, 211, 94);
 
-}
-#checked{
-    display: none
-}
-#checked:checked+.check_lable{
-    /* box-shadow: -1px -1px 5px  #000; */
-    background: #aaa
-}
-#checked:checked+.check_lable .circle{
-    box-shadow: -1px 1px 5px  #000;
-    position: absolute;
-    /* background: red; */
-    left: 52px;
-    transition: .5s
-}
-.check_lable .circle{
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    transition: .5s
-}
-.check_lable .circle{
-    width: 42px;
-    height: 42px;
-    background: #fff;
-    border-radius: 50%;
-  
-    box-shadow: 1px -1px 5px  #000;
- 
-}
 /* _____________________________banner______________________________ */
 
 .banner{
