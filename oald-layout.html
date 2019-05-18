@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0
+        }
+        html,body{
+            height: 100%;
+        }
+        .package{
+            width: 100%;
+            height: 100%;
+            font-size: 0;
+           
+        }
+        .package>div{
+            vertical-align:middle;/* 两个行内元素并排对不齐，由于其中一个有字，所以导致基线补齐 ，添加 vertical-align:middle*/
+            display: inline-block;
+            font-size: 12px;
+            box-shadow: 0px 0px 3px #333
+        }
+        .left{
+            width: 20%;
+            height: 100%;
+            background: #ccc;
+        }
+        .content{
+            width: 40%;
+            height: 100%;
+            background: #777;
+        }
+        .right_first{
+            width: 20%;
+            height: 100%;
+            background: #eee;
+        }
+        .right_second{
+            width: 20%;
+            height: 100%;
+            background: #333;
+        }
+/* ---------------------------------------left-------------------------------------- */
+        .left_header{
+            width: 100%;
+            height: 60px;
+            background: #555;        
+        }
+        .left_body{
+            height: calc(100% - 60px);
+            overflow: auto;
+        }
+        .left_body ul{
+            background:rgb(233,238,243)
+        }
+        .left_body ul li{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid #fff;
+            padding-left: 5px;
+            color:rgb(16, 101, 219);
+            font-family: serif;
+            font-weight: 600;
+            box-sizing: border-box;
+            font-size: 18px
+        }
+        .left_body ul li:hover{
+            color: #fff;
+            
+            background-color:rgba(97, 163, 255,.5);
+            cursor: pointer;
+            border: 1px solid rgb(3, 116, 221);
+        }
+        .left_header{
+            color: #fff;
+            text-align: center;
+            line-height: 30px;
+        }
+        .left_serch{
+            position:relative
+        }
+        .left_serch input{
+            width: calc(100% - 20px);
+            height: 20px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            box-sizing: border-box;
+            border-radius:10px 0 0 10px;
+            border: none;
+            padding-left: 5px;
+        }
+        .left_serch button{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            border-radius: 0 10px 10px 0 ;
+            border: none;
+            background: rgb(74, 140, 247);
+            box-shadow: 1px 0px 3px #fff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .left_serch button i{
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url('./searchbtn.png') no-repeat;
+            background-size: 60% 60%;
+            background-position: left 20% top 20%
+        }
+        .left_serch button:active{
+            box-shadow: -1px -1px 3px #fff
+        }
+/* ------------------------------------------content---------------------------------- */
+        .content_header{
+            height: 50px;
+            background: #fff;
+            box-shadow: 0 -1px 3px #555;
+            position: relative;
+        }
+        .btn_box{
+            width: 50px;
+            height: 16px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            position:absolute;
+            margin: 14px;
+        }
+        .btn_box button{
+            width: 25px;
+            height: 16px;
+            float: left;
+            cursor: pointer;
+            background: linear-gradient(#fff, #ccc);
+            font-size: 10px
+        }
+        .btn_box button:hover{
+            background: linear-gradient(#ccc, #fff)
+        }
+        .btn_box button:active{
+            box-shadow:1px  -1px 5px  #000;
+        }
+        .left_btn{
+            border-radius: 8px 0 0 8px;
+            border: none;
+            box-shadow:-1px 1px 5px  #000;
+        }
+        .right_btn{
+            border-radius: 0 8px 8px 0;
+            border: none;
+            box-shadow:1px 1px 5px  #000;
+        }
+
+
+        .content_header .small{
+            width: 130px;
+
+            right: 10px
+        }
+        .content_header .small button{
+            height: 16px;
+            border:none;
+        }
+        .content_header .small button:active{
+            box-shadow:-1px -1px 3px  #000;
+        }
+        .content_header .small .left_btn_s{
+            width: 30px;
+            border-radius: 8px 0 0 8px;
+            box-shadow:-1px 1px 3px  #000;
+        }
+        .content_header .small .center_btn_s{
+          
+            box-shadow:0px 1px 3px  #000;
+        }
+        .content_header .small .right_btn_s{
+            width: 40px;
+            border-radius: 0 8px 8px 0;
+            box-shadow:1px 1px 3px  #000;
+        }
+
+
+        .content_body{
+            width: 100%;
+            height: calc(100% - 50px);
+          
+        }
+        .content_body .content_text{
+            width: 100%;
+            height: 100%;
+            background: #fff;
+            padding: 10px;
+            box-sizing: border-box;
+            overflow: auto
+        }
+        .content_text b{
+            color: rgb(109, 38, 175)
+        }
+        .content_text u{
+            font-weight: 600;
+            color: rgb(168, 0, 0)
+        }
+    </style>
+</head>
+<body>
+    <div class="package">
+        <div class="left">
+            <div class="left_header">
+                <h3>
+                    OALD Se7en
+                </h3>
+                <div class="left_serch">
+                    <input type="text">
+                    <button>
+                     <i></i>
+                    </button>
+                </div>
+            </div>
+            <div class="left_body">
+               <div>
+                    <ul>
+                            <li>oar</li>
+                            <li>oarlock</li>
+                            <li>oarsman</li>
+                            <li>oat</li>
+                            <li>oatcake</li>
+                            <li>oater</li>
+                            <li>oath</li>
+                            <li>oatmeal</li>
+                            <li>ob-gyn</li>
+                            <li>obdurate</li>
+                            <li>obdeient</li>
+                            <li>obelisk</li>
+                            <li>obese</li>
+                            <li>obi</li>
+                            <li>object</li>
+                            <li>object lunguage</li>
+                            <li>observe</li>
+                            <li>obsolete</li>
+                            <li>obstetricus</li>
+                            <li>obstacle</li>
+                            <li>oar</li>
+                            <li>oarlock</li>
+                            <li>oarsman</li>
+                            <li>oat</li>
+                            <li>oatcake</li>
+                            <li>oater</li>
+                            <li>oath</li>
+                            <li>oatmeal</li>
+                            <li>ob-gyn</li>
+                            <li>obdurate</li>
+                            <li>obdeient</li>
+                            <li>obelisk</li>
+                            <li>obese</li>
+                            <li>obi</li>
+                            <li>object</li>
+                            <li>object lunguage/li>
+                            <li>observe</li>
+                            <li>obsolete</li>
+                            <li>obstetricus</li>
+                            <li>obstacle</li>
+                        </ul>
+               </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_header">
+                <div class="btn_box">
+                    <button class="left_btn">+</button>
+                    <button class="right_btn">♬</button>
+                   
+                </div>
+                <div class="btn_box small">
+                    <button class="left_btn_s">Tools</button>
+                    <button class="center_btn_s" style="width:35px">Setting</button>
+                    <button class="center_btn_s" style="width:25px">Help</button>
+                    <button class="right_btn_s">Donate</button>
+                </div>
+            </div>
+            <div class="content_body">
+                <div class="content_text">
+                    <span>
+                        <b>'object code</b> (also <b>'object language</b> ) <i><b>noun</b></i> [U](computing计)
+                        the language into which a program is translated using a    <u>COMPILERor</u>  an <u>ASSEMBLER</u> （编译或汇编程序的）目标码，目标代码， 目的标
+                    </span>
+                       
+                </div>
+            </div>
+            
+        </div>
+        <div class="right_first">
+                <div class="left_header">
+                        <h3>
+                           Vocabulary
+                        </h3>
+                        <div class="left_serch">
+                                <input type="text" style="left:10px;border-radius:10px" placeholder="Search Vocabulary">
+                        </div>
+                    </div>
+                    <div class="left_body">
+                       <div>
+                            <ul>
+                                    <li>oar</li>
+                                    <li>oarlock</li>
+                                    <li>oarsman</li>
+                                    <li>oat</li>
+                                    <li>oatcake</li>
+                                    <li>oater</li>
+                                    <li>oath</li>
+                                    <li>oatmeal</li>
+                                    <li>ob-gyn</li>
+                                    <li>obdurate</li>
+                                    <li>obdeient</li>
+                                    <li>obelisk</li>
+                                    <li>obese</li>
+                                    <li>obi</li>
+                                    <li>object</li>
+                                    <li>object lunguage</li>
+                                    <li>observe</li>
+                                    <li>obsolete</li>
+                                    <li>obstetricus</li>
+                                    <li>obstacle</li>
+                                    <li>oar</li>
+                                    <li>oarlock</li>
+                                    <li>oarsman</li>
+                                    <li>oat</li>
+                                    <li>oatcake</li>
+                                    <li>oater</li>
+                                    <li>oath</li>
+                                    <li>oatmeal</li>
+                                    <li>ob-gyn</li>
+                                    <li>obdurate</li>
+                                    <li>obdeient</li>
+                                    <li>obelisk</li>
+                                    <li>obese</li>
+                                    <li>obi</li>
+                                    <li>object</li>
+                                    <li>object lunguage/li>
+                                    <li>observe</li>
+                                    <li>obsolete</li>
+                                    <li>obstetricus</li>
+                                    <li>obstacle</li>
+                                </ul>
+                       </div>
+                    </div>
+        </div>
+        <div class="right_second">
+                <div class="left_header">
+                        <h3>
+                            History
+                        </h3>
+                        <div class="left_serch">
+                            <input type="text" style="left:10px;border-radius:10px" placeholder="Search History">
+                            <!-- <button>
+                             <i></i>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="left_body">
+                       <div>
+                            <ul>
+                                    <li>oar</li>
+                                    <li>oarlock</li>
+                                    <li>oarsman</li>
+                                    <li>oat</li>
+                                    <li>oatcake</li>
+                                    <li>oater</li>
+                                    <li>oath</li>
+                                    <li>oatmeal</li>
+                                    <li>ob-gyn</li>
+                                    <li>obdurate</li>
+                                    <li>obdeient</li>
+                                    <li>obelisk</li>
+                                    <li>obese</li>
+                                    <li>obi</li>
+                                    <li>object</li>
+                                    <li>object lunguage</li>
+                                    <li>observe</li>
+                                    <li>obsolete</li>
+                                    <li>obstetricus</li>
+                                    <li>obstacle</li>
+                                    <li>oar</li>
+                                    <li>oarlock</li>
+                                    <li>oarsman</li>
+                                    <li>oat</li>
+                                    <li>oatcake</li>
+                                    <li>oater</li>
+                                    <li>oath</li>
+                                    <li>oatmeal</li>
+                                    <li>ob-gyn</li>
+                                    <li>obdurate</li>
+                                    <li>obdeient</li>
+                                    <li>obelisk</li>
+                                    <li>obese</li>
+                                    <li>obi</li>
+                                    <li>object</li>
+                                    <li>object lunguage/li>
+                                    <li>observe</li>
+                                    <li>obsolete</li>
+                                    <li>obstetricus</li>
+                                    <li>obstacle</li>
+                                </ul>
+                       </div>
+                    </div>
+        </div>
+    </div>
+</body>
+</html>
