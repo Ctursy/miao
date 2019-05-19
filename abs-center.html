@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0 ;
+        padding: 0;
+        background: #333;
+        color: #fff
+    }
+    .block{
+        width: 350px;
+        height: 450px;
+    }
+    
+
+    .box{
+        width: 300px;
+        border: 2px solid #fff;
+        height: 400px;
+        text-align: center;
+        font-size: 0;
+    }
+    .sup{
+        height: 100%;
+      
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .content{
+        width: 200px;
+        border: 2px solid #fff;
+        display: inline-block;
+        vertical-align: middle;
+        /* text-align: center; */
+      
+     
+        /* margin-top: 50%; */
+        /* transform: translate(0,-50%) */
+    }
+    .content img,.content2 img{
+        width:100%
+    }
+
+
+    .box2{
+        width: 300px;
+        border: 2px solid #fff;
+        height: 400px;
+        position: relative;
+    }
+    .content2{
+        width: 200px;
+        border: 2px solid #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%)
+    }
+    </style>
+</head>
+<body>
+    <div class="block">
+        <h1>inline</h1>
+        <div class="box">
+            <div class="sup"></div>
+            <div class="content">
+              <img src="./rhino.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <h1>position</h1>
+
+        <div class="box2">
+            <div class="content2">
+                <img src="./rhino.jpg" alt="" >
+            </div>
+        </div>
+    </div>
+</body>
+</html>
