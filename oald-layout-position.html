@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OALD</title>
+    <style>
+     *{margin: 0;padding: 0;box-sizing: border-box}
+    html{
+        height: 100%;
+    }
+    body{
+        height: 100%;
+        background: #ccc;
+        position: relative;
+        color: #fff;
+        font-size: 25px;
+        /* min-width: 800px; */
+        
+    }
+    .nav{
+        width: 20%;
+        height: 100%;
+        background: #eee;
+        border: 1px solid #fff;
+        min-width: 130px;
+        
+    }
+    .fst{
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .trd{
+        position: absolute;
+        right: 20%;
+        top: 0; 
+        background: #777
+    }
+    .fth{
+        position: absolute;
+        right: 0;
+        top: 0;   
+    }
+    .content{
+        width: 40%;
+        height: 100%;
+        position: absolute;
+        left: 20%;
+    }
+    .nav .head{
+        width: 100%;
+        height: 60px;
+        background: #333;
+        text-align: center;
+        color: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* border: 1px solid #fff */
+    }
+    .content .head{
+        width: 100%;
+        height: 60px;
+        background: #fff;
+        text-align: center;
+        color: #333;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* border: 1px solid #fff */
+    }
+    .nav .container{
+        width: 100%;
+        height: calc(100% - 60px);
+        overflow: auto;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        color: #333
+    }
+    .content .container{
+        width: 100%;
+        height: calc(100% - 60px);
+        overflow: auto;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: #333
+    }
+    </style>
+</head>
+<body>
+    <div class="nav fst">
+        <div class="head">
+            <b>Header</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+        </div>
+        <div class="container">
+            <div style="height:1000px;text-align: center">
+                    <b>container</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="content sec">
+        <div class="head">
+            <b>Content Header</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+        </div>
+        <div class="container">
+            <div style="height:300px;text-align: center;color: #fff">
+                    <b>Content Container</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="nav trd">
+        <div class="head">
+            <b>Header</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+        </div>    
+        <div class="container">
+            <div style="height:1000px;text-align: center;color: #fff">
+                    <b>container</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+            </div>
+        </div>
+    </div>
+    <div class="nav fth">
+        <div class="head">
+            <b>Header</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+        </div>
+        <div class="container">
+            <div style="height:1000px;text-align: center">
+                    <b>container</b><span style="height:100%;display:inline-block;vertical-align:middle"></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
