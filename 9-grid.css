@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: #333;
+  color: #fff;
+}
+
+.package {
+  font-size: 0;
+}
+
+.box {
+  font-size: 20px;
+  width: 500px;
+  height: 500px;
+  border: 2px solid #fff;
+  display: inline-block;
+  margin: 20px;
+  text-align: center;
+}
+
+.nine {
+  width: 420px;
+  height: 420px;
+  background: #ccc;
+  margin: 10px auto;
+}
+
+table.nine {
+  border-collapse: collapse;
+  padding: 5px;
+  background: #ccc;
+}
+
+table.nine tr {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid #777;
+}
+
+table.nine tr td {
+  width: 140px;
+  height: 140px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  cursor: pointer;
+  z-index: 1;
+}
+
+table.nine tr td:hover {
+  width: 140px;
+  height: 140px;
+  z-index: 10;
+  border: 5px solid #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #333;
+}
+
+table.nine col {
+  border: 5px solid #777;
+}
+
+.box.block {
+  z-index: 1px;
+}
+
+.box.block .nine {
+  border-top: 5px solid #777;
+  border-left: 5px solid #777;
+  z-index: 1px;
+}
+
+.box.block .sq {
+  display: block;
+  width: 140px;
+  height: 140px;
+  float: left;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right: 5px solid #777;
+  border-bottom: 5px solid #777;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.box.block .sq:hover::before {
+  display: block;
+  width: 145px;
+  content: '';
+  height: 145px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 5px solid #fff;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  z-index: 10;
+  background: #333;
+}
+/*# sourceMappingURL=9-grid.css.map */

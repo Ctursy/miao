@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0
+}
+html,body{
+    background: #333;
+    color: #fff;
+}
+.package{
+    font-size: 0;
+}
+.box{
+    font-size: 20px;
+    width: 500px;
+    height: 500px;
+    border: 2px solid #fff;
+    display: inline-block;
+    margin: 20px;
+    text-align: center
+}
+.nine{
+    width: 420px;
+    height: 420px;
+    background: #ccc;
+    margin: 10px auto;
+    // padding: 10px;
+}
+// TABLE--------------------------------
+table.nine{
+    // box-sizing: border-box;
+    border-collapse: collapse;
+    padding: 5px;
+    background: #ccc;
+    tr{
+        box-sizing: border-box;  border: 5px solid #777;
+        td{
+            width: 140px;
+            height: 140px;
+            box-sizing: border-box;
+          cursor: pointer;
+            z-index: 1;
+        }
+        td:hover{
+            width: 140px;
+            height: 140px;
+            z-index: 10;
+            border: 5px solid #fff;
+            box-sizing: border-box;
+            background: #333
+        }
+    }
+    col{
+        border: 5px solid #777; 
+    }
+}
+
+// BLOCK-----------------------------
+.box.block{
+    z-index: 1px;
+    .nine{
+        border-top: 5px solid #777;
+        border-left: 5px solid #777;
+        z-index: 1px;
+    }
+    .sq{
+        display: block;
+        width: 140px;
+        height: 140px;
+        float: left;
+        box-sizing: border-box;
+        border-right: 5px solid #777;
+        border-bottom: 5px solid #777;
+        position: relative;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .sq:hover{
+        // border-right: 5px solid #fff;
+        // border-bottom: 5px solid #fff;
+        // border: 5px solid #fff;
+    }
+    .sq:hover::before{
+        display: block;
+        width: 145px;
+        content:'';
+        height: 145px;
+        box-sizing: border-box;
+        border: 5px solid #fff;
+        // border-top: 5px solid #fff;
+        // border-left: 5px solid #fff;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        z-index: 10;
+        background: #333
+      
+        // z-index: 10px;
+    }
+}
