@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+}
+
+.package {
+  min-width: 500px;
+  width: 500px;
+  margin: 10px;
+  padding: 30px;
+  border: 2px solid #eee;
+}
+
+.table {
+  border-collapse: collapse;
+  color: #333;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.table tr td, .table tr th {
+  border-top: 1px solid #dee2e6;
+  padding: 10px;
+}
+
+.table tbody tr:nth-child(1) {
+  border-top: 2px solid solid #dee2e6;
+}
+
+.table-dark {
+  color: #fff;
+  background: #343a40;
+}
+
+.table-dark tr td, .table-dark tr th {
+  border-top: 1px solid #454d55;
+  padding: 10px;
+}
+
+.table-dark tbody tr:nth-child(1) {
+  border-top: 2px solid #454d55;
+}
+
+.thead-light {
+  background: #e9ecef;
+  color: #333;
+}
+
+.thead-dark {
+  color: #fff;
+  background: #343a40;
+}
+
+.table-striped tbody tr:nth-child(odd) {
+  background: #f2f2f2;
+}
+
+.table-striped.table-dark tbody tr:nth-child(odd) {
+  background: #3e444a;
+}
+
+.table-bordered td, .table-bordered th {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #dee2e6;
+}
+
+.table-bordered.table-dark td, .table-bordered.table-dark th {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #454d55;
+}
+
+.table-borderless tr td, .table-borderless tr th {
+  border: none;
+}
+
+.table-borderless tbody tr:nth-child(1) {
+  border-top: none;
+}
+
+.table-borderless.table-dark tr td, .table-borderless.table-dark tr th {
+  border: none;
+}
+
+.table-borderless.table-dark tbody tr:nth-child(1) {
+  border-top: none;
+}
+
+.table-hover tbody tr:hover {
+  background: #ececec;
+}
+
+.table-hover.table-dark tbody tr:hover {
+  background: #43494e;
+}
+
+.table-sm tr td, .table-sm tr th {
+  padding: 5px;
+}
+
+.table-active {
+  background: #dadada;
+}
+
+.table-active.table-dark {
+  background: #dadada;
+}
+
+.table-primary {
+  background: #b8daff;
+}
+
+.bg-primary {
+  background: #00d5ff;
+}
+
+.table-success {
+  background: #c3e6cb;
+}
+
+.bg-success {
+  background: #28a7a9;
+}
+
+.table-warning {
+  background: #ffeeba;
+}
+
+.bg-warning {
+  background: #ffc107;
+}
+
+.table-danger {
+  background: #f5c6cb;
+}
+
+.bg-danger {
+  background: #dc3545;
+}
+
+.table-responsive {
+  overflow: auto;
+}
+
+.table-responsive .table {
+  width: 700px;
+}
+
+.check_class_list label {
+  display: inline-block;
+  width: 200px;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 20px;
+  vertical-align: middle;
+}
+
+.check_class_list input {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+fieldset {
+  margin: 20px;
+  padding: 20px;
+}
+
+legend {
+  font-size: 20px;
+}
+/*# sourceMappingURL=bootstrap-table.css.map */

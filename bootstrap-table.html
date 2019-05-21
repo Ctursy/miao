@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-table.css">
+</head>
+
+<body>
+    <div class="package table-responsive_eg">
+        <table class="table_eg table">
+            <!-- <caption class="caption_hidden">List of users</caption> -->
+            <thead class="thead_eg">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr_eg">
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                    <td>Larry</td>
+                    <td>the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="check_class_list">
+        <label for="table-dark" onchange="addClass('table_eg','table-dark')">table-dark
+            <input type="checkbox" name="table-dark" id="table-dark">
+        </label>
+        <label onchange="addClass('thead_eg','thead-dark')">thead-dark
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('thead_eg','thead-light')">thead-light
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table_eg','table-striped')">table-striped
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table_eg','table-bordered')">table-bordered
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table_eg','table-borderless')">table-borderless
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table_eg','table-hover')">table-hover
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table_eg','table-sm')">table-sm
+            <input type="checkbox" name="" id="">
+        </label>
+        <label onchange="addClass('table-responsive_eg','table-responsive')">table-responsive
+            <input type="checkbox" name="" id="">
+        </label>
+        <form>
+            <fieldset>
+                <legend>default-table</legend>
+                <label onchange="addClass('tr_eg','table-active')">table-active
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','table-primary')">table-primary
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','table-success')">table-success
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','table-warning')">table-warning
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','table-danger')">table-danger
+                    <input type="checkbox" name="" id="">
+                </label>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend>dark-table</legend>
+                <label onchange="addClass('tr_eg','bg-primary')">bg-primary
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','bg-success')">bg-success
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','bg-warning')">bg-warning
+                    <input type="checkbox" name="" id="">
+                </label>
+                <label onchange="addClass('tr_eg','bg-danger')">bg-danger
+                    <input type="checkbox" name="" id="">
+                </label>
+
+            </fieldset>
+        </form>
+
+
+
+
+
+
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+    function addClass(dom_classname, className) {
+        var table_dom = document.getElementsByClassName(dom_classname)[0]
+        if (table_dom.classList.contains(className)) {
+            table_dom.classList.remove(className)
+        } else {
+            table_dom.classList.add(className)
+
+        }
+    }
+</script>

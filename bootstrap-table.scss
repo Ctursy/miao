@@ -1,0 +1,209 @@
+
+*{margin: 0}
+
+// 表格包装
+.package{
+    min-width: 500px;
+    width: 500px;
+    margin: 10px;
+    padding: 30px;
+    border: 2px solid #eee
+}
+// 表格基本样式
+.table{
+    border-collapse: collapse;
+    color:#333;
+    width:100%;
+    text-align: center;
+    margin: 10px 0;
+    tr{
+        
+        td,th{
+            border-top: 1px solid rgb(222,226, 230);
+            padding: 10px;
+        }
+      
+      
+    }
+    tbody tr:nth-child(1){
+        border-top: 2px solid solid rgb(222,226, 230);
+    }
+}
+// ---------------表格扩展样式----------------
+//暗色表格
+.table-dark{
+    color:#fff;
+    background: rgb(52, 58, 64);
+    tr{
+        td,th{
+            border-top: 1px solid rgb(69,77, 85);
+            padding: 10px;
+        }
+    }
+    tbody tr:nth-child(1){
+        border-top: 2px solid rgb(69,77, 85);
+    }
+  
+}
+
+
+// 表头高亮
+.thead-light{
+    background: rgb(233, 236, 239);
+    color:#333;
+}
+// 表头暗色
+.thead-dark{
+    color:#fff;
+    background: rgb(52, 58, 64);
+}
+
+
+//隔行变色
+.table-striped{
+    tbody tr:nth-child(odd){
+        background: rgb(242, 242, 242);
+    }
+}
+//暗色表格 下 隔行变色
+.table-striped.table-dark{
+    tbody tr:nth-child(odd){
+        background: rgb(62, 68, 74);
+    }
+}
+
+//内框表格
+.table-bordered{
+    td,th{
+        box-sizing: border-box;
+        border: 1px solid rgb(222,226, 230);
+    }
+
+}
+//暗色表格 下 内框表格
+.table-bordered.table-dark{
+    td,th{
+        box-sizing: border-box;
+        border: 1px solid rgb(69,77, 85)
+    }
+}
+// 无表格
+.table-borderless {
+    tr{
+        td,th{
+          border: none
+        }
+    }
+    tbody tr:nth-child(1){
+        border-top: none;
+    }
+}
+//暗色 无表格
+.table-borderless.table-dark {
+    tr{
+        td,th{
+          border: none
+        }
+    }
+    tbody tr:nth-child(1){
+        border-top: none;
+    }
+}
+//hover
+.table-hover{
+    tbody tr:hover{
+       background: rgb(236, 236, 236)
+    }
+}
+// 暗色hover
+.table-hover.table-dark{
+    tbody tr:hover{
+       background: rgb(67, 73, 78)
+    }
+}
+
+
+//Small table
+.table-sm{
+    tr{
+        td,th{
+            padding: 5px;
+        }
+    }
+}
+
+// Contextual classes 行色
+.table-active{
+    background: rgb(218, 218, 218)
+}
+.table-active.table-dark{
+    background: rgb(218, 218, 218)
+}
+
+.table-primary{
+    background: rgb(184, 218, 255)
+}
+.bg-primary{
+    background: rgb(0, 213, 255)
+}
+
+
+.table-success{
+    background: rgb(195, 230, 203)
+}
+.bg-success{
+    background: rgb(40, 167, 169)
+}
+
+.table-warning{
+    background: rgb(255, 238, 186)
+}
+.bg-warning{
+    background: rgb(255, 193, 7)
+}
+
+
+.table-danger{
+    background: rgb(245, 198, 203)
+}
+.bg-danger{
+    background: rgb(220, 53, 69)
+}
+
+.table-responsive{
+    .table{
+        width: 700px
+    }
+    overflow: auto
+}
+
+
+
+// -------------------------选类按钮--------------------
+.check_class_list{ 
+    label{
+        display: inline-block;
+        width: 200px;
+        height: 30px;
+        line-height: 30px;
+
+        // float: left;
+        // background: #ccc;
+        margin:0 20px;
+        vertical-align: middle;
+       
+    }
+    input{
+       width: 20px;
+       height: 20px;
+       vertical-align: middle
+    }
+}
+
+fieldset{
+    margin: 20px;
+    padding: 20px
+}
+legend{
+    font-size: 20px
+}
