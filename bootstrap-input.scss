@@ -1,0 +1,125 @@
+*{
+    margin: 0 ;
+    padding: 0
+}
+.package{
+    width: 100%;
+    .content{
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 100px;
+        font-size: 14px;
+        color: #555;
+        // background: #eee;
+
+        .input{
+            display: table;
+            width: 100%;
+            height: 40px;
+            margin-bottom:10px; 
+            // border: 1px solid #999;
+            box-sizing: border-box;
+            .name{
+                display: table-cell;
+                box-sizing: border-box;
+                // width: 40px;
+                height: 40px;
+                text-align: center;
+                line-height: 36px;
+                background: #e9ecef;
+                border: 1px solid #ced4da;
+            }
+         
+            .value{
+                box-sizing: border-box;
+               font-size: 0;
+               border: 1px solid #ced4da;
+                display: table-cell;
+                input{
+                   height: 40px ;
+                   width: 100%;
+                   border: none;
+                   padding-left:10px; 
+                   box-sizing: border-box;
+                   border-radius:5px;
+                }
+              
+            }
+            .left{
+                input{
+                    border: none;
+                }
+                border-radius: 5px 0 0 5px ;
+                border-right: none;
+               
+            }
+            .right{
+                input{
+                    border: none;
+                }
+                border-radius: 0 5px 5px 0;
+            }
+            .center{
+                input{
+                    border: none;
+                }
+                border-right: none;
+            }
+            
+        }
+        .textarea{
+            display: table;
+            width: 100%;
+            margin-bottom: 10px;
+            .name{
+                display: table-cell;
+                box-sizing: border-box;
+                // width: 40px;
+                height: 80px;
+                text-align: center;
+                vertical-align: middle;
+                line-height: 80px;
+                background: #e9ecef;
+                border: 1px solid #ced4da;
+            }
+            .value{
+                box-sizing: border-box;
+                font-size: 0;
+                border: 1px solid #ced4da;
+                 display: table-cell;
+                 vertical-align: middle;
+                textarea{
+                    height: 80px ;
+                    width: 100%;
+                    border: none;
+                    padding:10px; 
+                    box-sizing: border-box;
+                    border-radius:5px;
+                    vertical-align: middle
+                }
+                
+            }
+            .left{
+                input{
+                    border: none;
+                }
+                border-radius: 5px 0 0 5px ;
+                border-right: none;
+               
+            }
+            .right{
+                input{
+                    border: none;
+                }
+                border-radius: 0 5px 5px 0;
+            }
+            .center{
+                textarea{
+                    border: none;
+                }
+                border-right: none;
+            }
+        }
+    }
+   
+}

@@ -1,0 +1,496 @@
+*{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box
+}
+ul{
+    list-style: none;
+}
+html,body,.package{
+    height: 100%;
+    font-size: 0
+}
+.package div{
+    vertical-align: middle
+}
+a:link{
+    text-decoration:none;
+    color: #930401
+}
+a:hover{
+    text-decoration:underline
+}
+a:visited{
+    text-decoration:none;
+    color: #930401
+}
+.header{
+    width: 100%;
+    min-width: 650px;
+    height: 60px;
+    font-size: 0;
+    /* background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_17/top_data1e9c5d.gif) no-repeat; */
+    position: relative;
+    /* background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_17/top_bg1e9c5d.jpg) no-repeat right; */
+    background-size: 100%;
+    box-sizing: border-box;
+}
+.header div{
+    /* display: inline-block; */
+    vertical-align: middle;
+    font-size: 12px;
+    
+}
+.logo{
+    height: 60px;
+    width: 215px;
+    position: relative;
+    z-index: 999;
+    float: left;
+}
+.logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.sign_info{
+    width: 270px;
+    height: 60px;
+    padding: 10px;
+    background: transparent;
+    position: relative;
+    z-index: 999;
+    float: left;
+}
+
+.note{
+    /* display: inline-block; */
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url('./icon_qa_hover.png')  no-repeat;
+    background-size: 100% 100%;
+    vertical-align: middle
+}
+.serch{
+    width: 745px;
+    height: 60px;
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_8/top_bg1e9c5d.jpg) no-repeat right;
+    position: absolute;
+    right: 0;
+    z-index: 990;
+}
+.choose{
+   position: absolute;
+   right: 10px;
+    height: 30px;
+    line-height: 30px;
+}
+.input_serch{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    width: 290px;
+    padding: 5px;
+    box-sizing: border-box
+}
+.input_serch input{
+    width: 280px;
+    height: 22px;
+    border: none;
+    border-radius: 5px;
+    position: absolute;
+    padding-left: 20px
+}
+.input_serch .serch_btn{
+    /* display: inline-block; */
+    float: left;
+    width: 15px;
+    height: 15px;
+    background: url(./search.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.input_serch .arrow_down{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url(./btn_title_arrow_down.png) no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.input_serch .arrow_down:hover{
+    background: url(./btn_title_arrow_down_hover.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+/* --------------------------nav------------------------ */
+.nav{
+    width: 180px;
+    height:calc(100% - 60px) ;
+    /* background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_17/left_bottom_bg1e9c5d.jpg) #C1B38E 0 596px; */
+   
+    /* border-top: 1px solid #c1b28e; */
+    margin-left: 10px ;
+    box-sizing: border-box;
+    /* display: inline-block; */
+    /* border:5px solid #930401 ; */
+    box-sizing: border-box;
+    float: left
+}
+.main_ul{
+    width: 180px;
+    /* margin-left: 5px; */
+    /* padding-top: 5px ; */
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_8/nav_bg20162b8802.png) no-repeat;
+    border-radius: 5px 0 0 0;
+    border:5px solid #930401 ;
+    border-left: none;
+    border-bottom: none;
+    box-sizing: border-box;
+   /* border-top:8px solid #930401 ; */
+}
+.main_ul ul{
+    margin-left: 5px;
+    
+}
+.main_ul ul li{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    height: 30px;
+    width: 145px;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    /* border-bottom: 1px solid  #c1b28e; */
+    cursor: pointer;
+    /* text-align: center */
+}
+.main_ul ul li:hover{
+    background: #f2d294;
+}
+.main_ul ul li .icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    /* background: #333; */
+    vertical-align: middle;
+    margin-right: 10px;
+ 
+}
+.write{ 
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position: 0px 0px;
+}
+.resave{ 
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position: 0px -31px;
+}
+.mail_list{ 
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position: 0px -62px;
+}
+
+.sec_ul{
+    /* margin-top: 5px; */
+    width: 180px;
+    height: calc(100% - 95px);
+    margin-bottom: 5px;
+    border-radius:0 0 5px 5px;
+    border:5px solid #930401 ;
+    box-sizing: border-box;
+}
+.sec_ul ul {
+  margin-left: 5px
+}
+.sec_ul ul li{
+    font-size: 12px;
+    width: 145px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0px 10px;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+    box-sizing: border-box
+}
+.sec_ul ul li:last-child{
+    padding-bottom: 10px;
+    border-bottom: 1px solid  #c1b28e;
+}
+.sec_ul ul li:hover{
+    background: #f2d294;
+}
+.icon_s{
+    display: inline-block;
+    width: 15px ;
+    height: 15px;
+    background: #ccc;
+  
+}
+.star{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position: -48px -158px;
+    vertical-align: baseline;
+}
+.bottle{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position: -29px -190px;
+    vertical-align: baseline;
+}
+.new{
+    position: absolute;
+    font-size: 8px;
+    font-weight: 500;
+    color: red;
+    top: -6px
+    /* vertical-align: super */
+}
+
+/* -------------------------content------------------- */
+.content{
+    /* margin: 10px 10px 10px 0; */
+    box-sizing: border-box;
+    width: calc( 100% - 190px);
+    height: calc( 100% - 60px );
+   /* background:#f2e5c6; */
+    /* border: 1px solid #333; */
+    /* display: inline-block; */
+    float: left;
+    padding: 3px;
+    border-radius:0  5px 5px 0;
+    border-top:5px solid #930401 ;
+    
+    box-sizing: border-box;
+   
+}
+.content_box{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 5px 0 0 0;
+    /* box-shadow: 0 0 3px #000; */
+     min-width: 700px;
+}
+.vice_content{
+    width: 300px;
+    height:  calc(100% - 20px);
+    /* background: #555; */
+
+    /* display: inline-block; */
+    float: left;
+    margin: 10px;
+}
+.main_content{
+    width: calc(100% - 340px);
+    height: calc(100% - 20px);
+    /* background: #777; */
+    /* display: inline-block; */
+    margin: 10px;
+    min-width: 350px;
+    float: left;
+}
+.hellow{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 14px;
+   
+}
+.say_hi{
+    font-size: 16px;
+    font-weight: 600;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: '黑体';
+    margin-top: 10px
+}
+.sign{
+  
+    height: 25px;
+    line-height: 25px
+}
+.sign span{
+   font-weight: 600;
+    color: #999
+}
+.mail_status .icon{
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    vertical-align: middle
+}
+.mail_status .mail{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/newicon/mail_2x2757b6.png)  no-repeat;
+    background-size: 142px 258px;
+    background-position:-29px -31px;
+}
+.mail_link{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 30px;
+    height: 30px;
+    /* text-align: center */
+    text-indent: 2em
+}
+.mail_recommend{
+    width: 100%;
+    height: 250px;
+    border: 1px solid rgb(198, 199, 139);
+    border-radius: 5px;
+    margin-top: 20px
+}
+.re_header{
+    width: 100%;
+    height: 30px;
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/skin_17/attbg1e9c5d.jpg) repeat-x;
+    line-height: 30px;
+    padding-left: 10px;
+}
+.re_center{
+    width: 100%;
+    font-size: 0;
+    border-bottom: 1px solid #c1b28e;
+   
+}
+.mail_img{
+    height: 100px;
+    width: 100px;
+    padding: 10px;
+    display: inline-block
+}
+.mail_img img{
+    width: 100%;
+    height: 100%;
+}
+.mail_explain{
+    width: calc(100% - 100px);
+    font-size: 14px;
+    display: inline-block
+}
+.mail_explain span{
+    font-size: 12px;
+    color: #999
+}
+.re_footer .mail_ul li{
+    width: 50%;
+    height: 40px;
+    /* height: 40px; */
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    float: left;
+}
+.re_footer .mail_ul li i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.iphone{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 0
+}
+.post_card{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 -32px
+}
+.ipad{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 -64px
+}
+.note_book{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 -96px
+}
+.android{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 -124px
+}
+.file_state{
+    background: url(https://rescdn.qqmail.com/zh_CN/htmledition/images/webp/today/newicon_today_brown1e9c5d.png) no-repeat;
+    background-position: 0 -160px
+}
+
+.r_block{
+    width: 100%;
+    height: 35px;
+}
+.mail_rec{
+    width: 100%;
+    height: 70px;
+    padding: 5px 10px 15px 10px;
+    background: #f4e9cd;
+    font-size: 14px
+}
+.mail_rec span{
+    font-size: 10px;
+    color: #777
+}
+.mail_rec a{
+    font-size: 10px;
+    text-decoration: underline 
+}
+.mail_info_self{
+    width: 100%;
+    height: 250px;
+    background: #f4e9cd;
+    border-radius: 5px;
+    border: 1px solid rgb(198, 199, 139);
+    margin-top: 18px
+}
+.mail_info_nav{
+    height: 25px;
+    margin-top: 3px;
+    padding: 0 4px;
+    border-bottom: 1px solid rgb(198, 199, 139);
+}
+.mail_info_nav_l,.mail_info_nav_r{
+    width: 145px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 24px;
+    display: inline-block;
+    background: #fff;
+    border-top: 1px solid rgb(198, 199, 139);
+    border-right: 1px solid rgb(198, 199, 139);
+    border-left: 1px solid rgb(198, 199, 139);
+    border-radius: 5px 5px 0 0;
+    margin-top: 1px;
+    text-align: center;
+    cursor: pointer;
+}
+.mail_info_nav_l{
+   
+    border-right:none
+}
+
+.mail_info_nav_on{
+    background: #f4e9cd;
+    border-bottom: 1px solid rgb(198, 199, 139);
+}
+.mail_info_content{
+    width: 100%;
+    height: 220px;
+    background: #fff;
+    font-size: 14px
+}
+.myself_content{
+    display: none
+}
