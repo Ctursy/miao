@@ -472,6 +472,77 @@ html body .package .banner .banner_content .banner_package .banner_img img {
   float: left;
 }
 
+html body .package .banner .banner_content .banner_package .next_btn {
+  width: 40px;
+  height: 70px;
+}
+
+html body .package .banner .banner_content .banner_package .next_btn i {
+  display: block;
+  line-height: 70px;
+  text-align: center;
+  font-size: 35px;
+  color: #ccc;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+html body .package .banner .banner_content .banner_package .next_btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+html body .package .banner .banner_content .banner_package .next_btn:hover a {
+  color: #fff;
+}
+
+html body .package .banner .banner_content .banner_package .banner_left {
+  position: absolute;
+  left: 234px;
+  top: 205px;
+  border-radius: 0 5px 5px 0;
+}
+
+html body .package .banner .banner_content .banner_package .banner_right {
+  position: absolute;
+  right: 0px;
+  top: 205px;
+  border-radius: 5px 0 0 5px;
+}
+
+html body .package .banner .banner_content .banner_index {
+  width: 400px;
+  height: 30px;
+  position: absolute;
+  right: 40px;
+  top: 420px;
+  font-size: 0;
+  text-align: right;
+  z-index: 30;
+}
+
+html body .package .banner .banner_content .banner_index i {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  position: relative;
+}
+
+html body .package .banner .banner_content .banner_index .on::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #ccc;
+  border-radius: 50%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
 html body .package .nav_menu {
   width: 100%;
   min-width: 1226px;
@@ -588,7 +659,6 @@ html body .package .nav_menu .nav_menu_content ul li:nth-child(-n + 5)::after {
 }
 
 .show {
-  opacity: 0 !important;
   -webkit-animation: show .5s forwards !important;
           animation: show .5s forwards !important;
 }

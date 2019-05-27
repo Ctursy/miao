@@ -2382,17 +2382,22 @@
                 </div>
                 <div class="banner_package">
                     <div class="banner_img" id="banner_img">
-                        <img id="banner_img_1"  src="./img/banner/xmad_15476942061027_STEvM.jpg" alt="">
-                        <img id="banner_img_2"  src="./img/banner/xmad_15531616096346_mMwvn.jpg" alt="">
+                        <img id="banner_img_1" src="./img/banner/xmad_15476942061027_STEvM.jpg" alt="">
+                        <img id="banner_img_2" src="./img/banner/xmad_15531616096346_mMwvn.jpg" alt="">
                         <img id="banner_img_3" src="./img/banner/xmad_15548066591437_Stxlj.jpg" alt="">
                         <img id="banner_img_4" src="./img/banner/xmad_15586648722759_MZIqD.jpg" alt="">
-                        <img id="banner_img_5"  src="./img/banner/xmad_15586661012003_thOfZ.jpg" alt="">
-                        <img id="banner_img_1"  src="./img/banner/xmad_15476942061027_STEvM.jpg" alt="">
-                    
+                        <img id="banner_img_5" src="./img/banner/xmad_15586661012003_thOfZ.jpg" alt="">
+                        <img id="banner_img_1" src="./img/banner/xmad_15476942061027_STEvM.jpg" alt="">
                     </div>
+                    <div class="banner_left next_btn "><i class="icon anticon icon-left"></i></div>
+                    <div class="banner_right next_btn"><i class="icon anticon icon-right"></i></div>
                 </div>
                 <div class="banner_index">
-
+                    <i class="index_point on"></i>
+                    <i class="index_point"></i>
+                    <i class="index_point"></i>
+                    <i class="index_point"></i>
+                    <i class="index_point"></i>
                 </div>
             </div>
         </div>
@@ -2406,46 +2411,6 @@
 
 </html>
 <script>
-    var imgArr = [
-        "./img/banner/xmad_15476942061027_STEvM.jpg",
-        "./img/banner/xmad_15531616096346_mMwvn.jpg",
-        "./img/banner/xmad_15548066591437_Stxlj.jpg",
-        "./img/banner/xmad_15586648722759_MZIqD.jpg",
-        "./img/banner/xmad_15586661012003_thOfZ.jpg",
-        "./img/banner/xmad_15548066591437_Stxlj.jpg",
-    ]
-    var scroll = function (id) {
-        var dom = document.getElementById(id)
-        for (let i=0; i<7; i++) {
-            (function () {
-                setTimeout(() => {
-                    // move_left(dom)
-                    // var left = 0
-                //  var move =  setInterval(() => {
-                //        left = left-1
-                       dom.style.left =-i*1226+'px'
-                       setTimeout(()=>{
-                        dom.classList.add('show')
-                       },0)
-                    //    setTimeout(()=>{
-                    //     dom.classList.remove('show')
-                    //    },.5)
-                    //    dom.classList.add('show')
-                //        if(left == -1226*i){
-                //            clearInterval(move)
-                //        }
-                //    }, 2);
-                 
-                //   dom.style.opacity = 0;
-                    // dom.style.left =left+'px'
-                  if(i==5){
-                    scroll(id)
-                  }
-                }, 2000*i);
-            })()
-          
-        }
-    }
 
     document.getElementById('banner_nav').addEventListener("mouseover", function () {
         dom = document.getElementById('nav_menu')
@@ -2457,6 +2422,93 @@
         dom.classList.add('hidden_slider')
         dom.classList.remove('show_slider')
     }, false);
-   
-    scroll('banner_img')
+// 轮播图
+    var banner_img = document.getElementById('banner_img');
+    var index_point = Array.from(document.getElementsByClassName('index_point'));
+    index_point.forEach((item,i)=>{
+        item.addEventListener('click',()=>{
+            console.log(item);
+            console.log(i);
+            scroll_animation(banner_img,-1226*i)
+        },false)
+    })
+
+    var index_on = 0;
+
+    // 滚动动画
+    is_scrolling=false;
+    function scroll_animation(dom,target){
+        if(is_scrolling){
+            return false;
+        }
+        index_point.forEach((item,i)=>{
+            item.classList.remove('on')
+        },false)
+
+        if(Math.abs(target/1226)>4){
+            index_on = 0
+        }else{
+            index_on = Math.abs(target/1226)
+        }
+       
+         console.log(index_on)
+        index_point[index_on].classList.add('on')
+
+        is_scrolling = true
+        var scroll = setInterval(()=>{
+            var now = dom.offsetLeft;
+            var step = 120;
+            if(now<target){
+                step = -step;
+            }
+            dom.style.left = now-step+"px"
+            if(now == target || Math.abs(target-now) < Math.abs(step)){
+                now=target;
+                dom.style.left = target+"px";
+                clearInterval(scroll);
+                is_scrolling = false
+            }
+        },20)
+    }
+    function scroll_auto(){
+        auto = setInterval(function(){
+        if(banner_img.offsetLeft==-1226*5){
+           banner_img.style.left = 0 +'px'
+       }
+        scroll_animation(banner_img,banner_img.offsetLeft-1226)
+        },5000)
+    }
+
+    // 轮播图zuo按钮绑定
+    document.getElementsByClassName('banner_left')[0].addEventListener("click", function () {
+      
+      
+        if(banner_img.offsetLeft==0){
+            banner_img.style.left = -1226*5 +'px'
+        }
+        scroll_animation(banner_img,banner_img.offsetLeft+1226)
+        
+    }, false);
+    // 轮播图you按钮绑定
+    document.getElementsByClassName('banner_right')[0].addEventListener("click", function () {
+       
+        
+       if(banner_img.offsetLeft==-1226*5){
+           banner_img.style.left = 0 +'px'
+       }
+           scroll_animation(banner_img,banner_img.offsetLeft-1226)
+       
+   }, false);
+
+ 
+   scroll_auto()
+
+
+
+
+
+
+
+
+
 </script>
