@@ -109,10 +109,6 @@
 
         }
 
-        .nav_li:last-child {
-            border-right: none
-        }
-
         .nav_li>img {
             width: 100%;
             height: auto;
@@ -200,7 +196,9 @@
                 width: 25%;
             }
 
-
+            .nav_li:nth-child(4n) {
+                border-right: none
+            }
 
         }
 
@@ -221,6 +219,9 @@
 
             .nav_li {
                 width: 50%
+            }
+            .nav_li:nth-child(2n) {
+                border-right: none
             }
         }
 
@@ -247,6 +248,9 @@
                 width: 50%;
                 margin: 0
              
+            }
+            .nav_li:nth-child(n) {
+                border-right: none
             }
         }
     </style>
