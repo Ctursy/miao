@@ -510,6 +510,79 @@ html{
                        
                     }
                 }
+                .banner_foot{
+                    width: 100%;
+                    position: relative;
+                    display: flow-root;
+                    height: 170px;
+                    margin-top: 20px;
+                    // background: rgba($color: #000, $alpha: .3);
+                    .banner_foot_nav{
+                        width: 240px;
+                        height: 170px;
+                        float: left;
+                        ul{
+                            display: flow-root;
+                            width: 100%;
+                            height: 100%;
+                            background: #5f5750;
+                            li{
+                                width: 80px;
+                                height: 85px;
+                                box-sizing: border-box;
+                                float: left;
+                                padding: 5px;
+                                position: relative;
+                                // box-shadow: 0 0 1px #000;
+                               a{
+                                   display: block;
+                                   width: 70px;
+                                   height: 59px;
+                                   margin-top: 5px;
+                                   text-align: center;
+                                   color: rgba($color: #fff, $alpha: .7);
+                                   i {
+                                       display: block;
+                                       width: 70px;
+                                       height: 45px;
+                                       font-size: 25px;
+                                       line-height: 45px
+                                   }
+                               }
+                            }
+                            li:hover a{
+                                color: #fff
+                            }
+                            li::after{
+                                content:'';
+                                width: 0px;
+                                height: 75px;
+                                border-right: 1px solid #665e57;
+                                position: absolute;
+                                right: 0;
+                                top: 5px;
+                               
+                            }
+                            li::before{
+                                content:'';
+                                width: 70px;
+                                height: 0px;
+                                border-top: 1px solid #665e57;
+                                position: absolute;
+                                left: 5px;
+                                top: 0px;
+                               
+                            }
+                        }
+                    }
+                    .banner_foot_img{
+                        width: 316px;
+                        height: 170px;
+                        background: rgba($color: #000, $alpha: .3);
+                        float: left;
+                        margin-left: calc(38px / 3);
+                    }
+                }
             }
             .nav_menu{
                 width: 100%;
