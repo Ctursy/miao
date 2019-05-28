@@ -2412,12 +2412,12 @@
 </html>
 <script>
 
-    document.getElementById('banner_nav').addEventListener("mouseover", function () {
+    document.getElementById('banner_nav').addEventListener("mouseover", ()=>{
         dom = document.getElementById('nav_menu')
         dom.classList.add('show_slider')
         dom.classList.remove('hidden_slider')
     }, false);
-    document.getElementById('banner_nav').addEventListener("mouseout", function () {
+    document.getElementById('banner_nav').addEventListener("mouseout", ()=> {
         dom = document.getElementById('nav_menu')
         dom.classList.add('hidden_slider')
         dom.classList.remove('show_slider')
@@ -2456,8 +2456,8 @@
 
         is_scrolling = true
         var scroll = setInterval(()=>{
-            var now = dom.offsetLeft;
-            var step = 120;
+            var now =               dom.offsetLeft;
+            var step = 12;
             if(now<target){
                 step = -step;
             }
@@ -2468,10 +2468,13 @@
                 clearInterval(scroll);
                 is_scrolling = false
             }
-        },20)
+            // var light = 0.1;
+            // dom.style.opacity = light = 0.1
+        },4)
     }
+    // 自动滚动
     function scroll_auto(){
-        auto = setInterval(function(){
+        auto = setInterval(()=>{
         if(banner_img.offsetLeft==-1226*5){
            banner_img.style.left = 0 +'px'
        }
@@ -2480,7 +2483,7 @@
     }
 
     // 轮播图zuo按钮绑定
-    document.getElementsByClassName('banner_left')[0].addEventListener("click", function () {
+    document.getElementsByClassName('banner_left')[0].addEventListener("click", ()=>{
       
       
         if(banner_img.offsetLeft==0){
@@ -2490,7 +2493,7 @@
         
     }, false);
     // 轮播图you按钮绑定
-    document.getElementsByClassName('banner_right')[0].addEventListener("click", function () {
+    document.getElementsByClassName('banner_right')[0].addEventListener("click", ()=> {
        
         
        if(banner_img.offsetLeft==-1226*5){

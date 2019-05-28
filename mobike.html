@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mobike</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .package {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            max-width: 1080px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .banner {
+            overflow: hidden;
+            position: relative;
+        }
+
+        .banner h1 {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            z-index: 1;
+            font-size: 40px;
+            transform: translateY(-50%);
+            /* text-shadow: 0 0 2px #fff; */
+            padding-left: 20px
+        }
+
+        #logo {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 150px;
+            height: 25px;
+            z-index: 10;
+        }
+
+        .bar {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 30px;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            line-height: 30px;
+            z-index: 2;
+        }
+
+        .start {
+            width: 300px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 5px;
+            background: rgba(0, 0, 0, .4);
+            color: #fff;
+            font-size: 25px;
+            font-family: '黑体';
+            position: absolute;
+            top: 55%;
+            left: 20px;
+            z-index: 1;
+            font-weight: 600;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .start:hover {
+            background: rgba(0, 0, 0, .6);
+        }
+
+        #logo>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .banner>img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .nav {
+            display: flow-root;
+        }
+
+        .nav_li {
+            height: 260px;
+            float: left;
+            position: relative;
+            box-sizing: border-box;
+            border-top: 3px solid #fff;
+            border-right: 3px solid #fff;
+            overflow: hidden;
+
+        }
+
+        .nav_li:last-child {
+            border-right: none
+        }
+
+        .nav_li>img {
+            width: 100%;
+            height: auto;
+            min-height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%)
+        }
+
+        .using {
+            margin-top: 20px
+        }
+
+        .use {
+            width: 30%;
+            height: 50px;
+            padding: 40px 0;
+            /* box-sizing: border-box; */
+            float: left;
+            /* background: rgba(0, 0, 0, .2); */
+            margin-right: 5%
+        }
+
+        .use:last-child {
+            margin-right: 0
+        }
+
+        .use i {
+            display: block;
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-left: 10px
+                /* margin: 20px */
+        }
+
+        .use i.vhart {
+            background: url('https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png') no-repeat;
+            background-size: 100% 100%
+        }
+
+        .use i.rp {
+            background: url('https://mobike.com/cn/assets/themes/moby/img/icon-rp.png') no-repeat;
+            background-size: 100% 100%
+        }
+
+        .use i.credit {
+            background: url('https://mobike.com/cn/assets/themes/moby/img/icon-credit.png') no-repeat;
+            background-size: 100% 100%
+        }
+
+        .use>div {
+            width: calc(100% - 60px);
+            /* height: 50px; */
+            float: left;
+            box-sizing: border-box;
+            padding-left: 10px
+        }
+
+        .use>div>div {
+            height: 25px;
+            line-height: 25px;
+        }
+
+        .gary {
+            color: #777
+        }
+
+
+        @media(min-width : 1080px) {
+            .banner {
+                width: 100%;
+                height: 800px;
+                box-shadow: 0 0 1px #000
+            }
+
+            .banner img {
+                width: 100%;
+                min-height: 100%;
+                height: auto;
+            }
+
+            .nav_li {
+                width: 25%;
+            }
+
+
+
+        }
+
+        @media (min-width: 640px) and (max-width: 1080px) {
+            .banner {
+                width: 100%;
+                height: 700px;
+                box-shadow: 0 0 1px #000
+            }
+
+            .banner img {
+
+                width: auto;
+                min-width: 100%;
+                ;
+                height: 100%;
+            }
+
+            .nav_li {
+                width: 50%
+            }
+        }
+
+        @media(max-width : 640px) {
+            .banner {
+                width: 100%;
+                height: 700px;
+                box-shadow: 0 0 1px #000;
+                background: rgba(0, 0, 0, .2)
+            }
+
+            .banner img {
+                width: auto;
+                min-width: 100%;
+                ;
+                height: 100%;
+            }
+
+            .nav_li {
+                width: 100%
+            }
+
+            .use {
+                width: 50%;
+                margin: 0
+             
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="banner">
+        <div class="package">
+            <div id="logo">
+                <img src="https://mobike.com/cn/assets/themes/moby/img/logo-text.svg" alt="">
+            </div>
+            <h1>让自行车回归城市</h1>
+            <div class="start">立刻开始使用 Mobike</div>
+            <div class="bar" style="z-index:5;background: none">“摩拜公交” 小程序上线 线上购买地铁票省时省力</div>
+        </div>
+
+
+
+        <img src="./mobike_img//hero-bg-8.jpg" alt="">
+        <div class="bar"></div>
+
+    </div>
+    <div class="nav">
+        <div class="nav_li"><img src=" https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg" alt=""></div>
+        <div class="nav_li"><img src="https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg" alt=""></div>
+        <div class="nav_li"><img src="https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg" alt=""></div>
+        <div class="nav_li"><img src="https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg" alt=""></div>
+        <!-- https://mobike.com/cn/assets/themes/moby/img/logo-text.svg
+                    https://mobike.com/cn/assets/themes/moby/img/promo-01.jpg
+                    https://mobike.com/cn/assets/themes/moby/img/promo-02.jpg
+                    https://mobike.com/cn/assets/themes/moby/img/promo-03.jpg
+                    https://mobike.com/cn/assets/themes/moby/img/promo-04.jpg -->
+    </div>
+    <div class="using">
+        <div class="package">
+            <div class="use">
+                <i class="vhart"></i>
+                <div>
+                    <div class="name">微信小程序</div>
+                    <div class="intr gary">微信扫码，直接用车</div>
+                </div>
+            </div>
+            <div class="use">
+                <i class="rp"></i>
+                <div>
+                    <div class="name">微信小程序</div>
+                    <div class="intr gary">微信扫码，直接用车</div>
+                </div>
+            </div>
+            <div class="use">
+                <i class="credit"></i>
+                <div>
+                    <div class="name">微信小程序</div>
+                    <div class="intr gary">微信扫码，直接用车</div>
+                </div>
+            </div>
+            <!-- https://mobike.com/cn/assets/themes/moby/img/icon-wechat.png -->
+            <!-- https://mobike.com/cn/assets/themes/moby/img/icon-rp.png -->
+            <!-- https://mobike.com/cn/assets/themes/moby/img/icon-credit.png -->
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
