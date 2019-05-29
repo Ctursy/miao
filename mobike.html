@@ -13,14 +13,9 @@
         }
 
         .package {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            right: 0;
-            max-width: 1080px;
+            position: relative;
             margin: 0 auto;
-            width: 100%;
+            display: flow-root;
         }
 
         .banner {
@@ -87,6 +82,25 @@
             height: 100%;
         }
 
+        .banner_nav{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            z-index: 1
+        }
+        .banner_nav ul{
+            display: flow-root;
+            color: #eee;
+            list-style: none;
+        }
+        .banner_nav ul li{
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
         .banner>img {
             position: absolute;
             left: 50%;
@@ -120,7 +134,10 @@
         }
 
         .using {
-            margin-top: 20px
+            margin-top: 10px;
+            position: relative;
+            /* height: 130px; */
+            border-bottom: 1px solid #eee;
         }
 
         .use {
@@ -178,7 +195,66 @@
             color: #777
         }
 
+        .footer{
+            width: 100%;
+            /* height: 155px; */
+            padding: 45px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .contact{
+            width: 470px;
+            /* height: 155px; */
+            float: left;
+            padding:0 20px;
+            box-sizing: border-box;
+            /* box-shadow:0 0 1px  #000 */
+        }
+        .contact_logo{
+            width: 160px;
+            height: 36px;
+            margin-bottom: 10px;
+        }
+        .contact_logo img{
+            width: 100%;
+            height: 100%;
+        }
+        .contact_logo ~div{
+            height: 35px;
+            line-height: 35px;
+            font-size: 18px;
+            color: #555
+        }
+        .footer_nav{
+            width: 50%;
+            float: right;
+            /* height: 155px; */
+            /* box-shadow:0 0 1px  #000 */
+        }
+        .footer_nav dl{
+            float: left;
+            width: 25%;
+            text-align: left;
+        }
+        .footer_nav dl dt{
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 10px
+        }
+        .footer_nav dl dd{
+            padding: 5px;
+            color: #555
+        }
 
+        .copy_right{
+            font-size: 12px;
+            color: #999;
+            padding: 40px 0;
+        }
+        .copy_right .package div{
+            height: 30px;
+            margin-left: 20px;
+            line-height: 30px
+        }
         @media(min-width : 1080px) {
             .banner {
                 width: 100%;
@@ -198,6 +274,9 @@
 
             .nav_li:nth-child(4n) {
                 border-right: none
+            }
+            .package{
+                width: 1080px
             }
 
         }
@@ -220,8 +299,19 @@
             .nav_li {
                 width: 50%
             }
+
             .nav_li:nth-child(2n) {
                 border-right: none
+            }
+            .package{
+                width: 100%
+            }
+            .footer_nav{
+                float: left;
+                width: 65%;
+                margin-left: 20px;
+                margin-top: 20px
+                
             }
         }
 
@@ -247,10 +337,23 @@
             .use {
                 width: 50%;
                 margin: 0
-             
             }
+
             .nav_li:nth-child(n) {
                 border-right: none
+            }
+            .package{
+                width: 100%;
+            }
+            .footer_nav{
+                width: 100%;
+            }
+            .footer_nav dl{
+                width: 50%;
+                height: 180px;
+                padding-left: 20px;
+                padding-top: 20px;
+                box-sizing: border-box
             }
         }
     </style>
@@ -260,9 +363,17 @@
 
 
     <div class="banner">
-        <div class="package">
+        <div class="package" style="height:100%">
             <div id="logo">
                 <img src="https://mobike.com/cn/assets/themes/moby/img/logo-text.svg" alt="">
+            </div>
+            <div class="banner_nav">
+                <ul>
+                    <li>产品</li>
+                    <li>膜拜科技</li>
+                    <li>关于</li>
+                    <li>广告合作</li>
+                </ul>
             </div>
             <h1>让自行车回归城市</h1>
             <div class="start">立刻开始使用 Mobike</div>
@@ -314,8 +425,56 @@
             <!-- https://mobike.com/cn/assets/themes/moby/img/icon-credit.png -->
         </div>
     </div>
+    <div class="footer">
+        <div class="package">
+            <div class="contact"> 
+                <div class="contact_logo">
+                    <img src="https://mobike.com/cn/assets/themes/moby/img/logo-text.svg" alt="">
+                </div>
+                <div>
+                    Beijing Mobike Technology Co., Ltd
+                </div>
+                <div>
+                    客服电话 400-811-7799
+                </div>
+                <div>
+                    北京摩拜科技有限公司
+                </div>
+            </div>
+            <div class="footer_nav">
+                <dl>
+                    <dt>产品</dt>
+                    <dd>经典版</dd>
+                    <dd>轻骑</dd>
+                    <dd>智能锁</dd>
+                </dl>   
+                <dl>
+                    <dt>生活</dt>
+                    <dd>城市</dd>
+                </dl>   
+                <dl>
+                    <dt>关于</dt>
+                    <dd>关于Moblike</dd>
+                    <dd>加入我们</dd>
+                    <dd>联系我们</dd>
+                    <dd>服务协议</dd>
+                </dl>    
+                <dl>
+                    <dt>社交网络</dt>
+                    <dd>微博</dd>
+                    <dd>微信</dd>
+                    <dd>知乎专栏</dd>
+                    <dd>Facebook</dd>
+                </dl>    
+            </div>
+        </div>
     </div>
-
+    <div class="copy_right">
+            <div class="package">
+                <div>京 ICP 备15053449 号  京公网安备 11010502032956 号 </div>
+                <div>增值电信业务经营许可证编号：京B2-20170053 </div>
+            </div>
+    </div>
 </body>
 
 </html>
