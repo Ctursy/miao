@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QQ邮箱</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .package {
+            height: 100%;
+            display: flex;
+            flex-direction: column
+        }
+
+        .header {
+            /* flex: 1; */
+            height: 60px;
+            width: 100%;
+            color: #fff;
+            font-size: 25px;
+            line-height: 60px;
+            font-weight: 600;
+            padding-left: 15px;
+            box-sizing: border-box;
+            background: #333
+        }
+
+        main {
+            flex: 1;
+            width: 100%;
+            background: #ccc;
+            display: flex;
+
+        }
+
+        nav {
+            transition: 1s;
+            width: 300px;
+            height: 100%;
+            background: #555;
+        }
+
+        section {
+            flex: 1;
+            height: 100%;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+
+        }
+
+        .content_left {
+            flex: .9;
+            height: 90%;
+            background: #333;
+            min-width: 300px;
+            transition: 1s;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+        
+        }
+       
+        .content_right {
+            transition: 1s;
+            width: 200px;
+            height: 90%;
+            background: #777
+        }
+
+        @media(max-width:1080px) {
+            nav{
+                width: 60px;   
+                transition: 1s
+            }
+            .header {
+                height: 0;
+                flex:1;
+                font-size: 20px;
+                line-height: 45px;
+                min-height: 45px
+            }
+
+            main {
+                flex: 9.5;
+                
+                background: #ccc;
+                display: flex;
+
+            }
+        }
+        @media(max-width:640px){
+            .header{
+                text-align: center;
+            }
+            .content_left{
+                flex: 1;
+                height: 100%;
+                background: #ccc;
+                transition: 1s
+            }
+            .content_right{
+                width: 0;
+              transition: 1s
+            }
+        }
+        .content1{
+           flex: .3;
+           height: 30%;
+           
+           background: #777;
+            font-size: 30px;
+            color: #fff;
+            text-align: center;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="package">
+        <div class="header">QQ邮箱</div>
+        <main>
+            <nav></nav>
+            <section>
+                <div class="content_left">
+                    <div class="content1">content1 </span></div>
+                </div>
+                <div class="content_right"></div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Oald7 牛津高阶第七版</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+     
+    }
+    html,body{
+        height: 100%;
+    }
+    .package{
+        display: flex;
+        height: 100%;
+    }
+    aside{
+        flex: .2;
+        height: 100%;
+    }
+    section{
+        flex: .4;
+        background: #057d9f;
+        display: flex;
+        flex-direction: column;
+    }
+    aside:nth-child(1){
+        background: #ffab00
+    }
+    aside:nth-child(3){
+        background: #ff3500
+    }
+    aside:nth-child(4){
+        background: #ffd173
+    }
+
+    .header{
+        height: 60px;
+        width: 100%;
+        background: #8f04ab;
+    }
+    .content{
+        width: 100%;
+        flex: 1;
+        background: #ffe100
+    }
+    @media(max-width:1080px){
+        .header{
+        flex: .8;
+        }
+        .content{
+            flex: 9.2
+        }
+    }
+    @media(max-width:640px){
+        .header{
+            min-height: 40px;
+            flex: .8;
+        }
+        .content{
+            flex: 9.2
+        }
+    }
+</style>
+<body>
+    <div class="package">
+        <aside>
+
+        </aside>
+        <section>
+            <div class="header">
+
+            </div>
+            <div class="content">
+
+            </div>
+        </section>
+        <aside>
+
+        </aside>
+        <aside>
+
+        </aside>
+    </div>
+</body>
+</html>
