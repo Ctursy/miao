@@ -744,15 +744,15 @@ html{
                                 }
                                 .group_block_bottom{
                                     position: absolute;
-                                    bottom: -90px;//-90
+                                    bottom: -100px;//-90
                                     left: 0;
                                     width: 100%;
-                                    height: 90px;
+                                    height: 100px;
                                     background: #ff6700;
                                     color: #fff;
                                     transition: .3s;
                                     text-align: left;
-                                    padding: 10px 30px ;
+                                    padding: 20px 30px ;
                                     box-sizing: border-box;
                                     span{
                                         font-size: 12px;
@@ -850,7 +850,7 @@ html{
                     .body_line{
                         width: 100%;
                         height: 120px;
-                        margin: 40px 0  30px;
+                        margin: 40px 0  20px;
                         img{
                             width: 100%;
                             height: 100%;

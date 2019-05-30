@@ -836,16 +836,16 @@ html body .package .body .container .shop_group .group_block .group_block_conten
 
 html body .package .body .container .shop_group .group_block .group_block_content .group_block_bottom {
   position: absolute;
-  bottom: -90px;
+  bottom: -100px;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 100px;
   background: #ff6700;
   color: #fff;
   -webkit-transition: .3s;
   transition: .3s;
   text-align: left;
-  padding: 10px 30px;
+  padding: 20px 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -958,7 +958,7 @@ html body .package .body .container .shop_group .eight_p::before {
 html body .package .body .container .body_line {
   width: 100%;
   height: 120px;
-  margin: 40px 0  30px;
+  margin: 40px 0  20px;
 }
 
 html body .package .body .container .body_line img {
