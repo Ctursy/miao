@@ -17,7 +17,10 @@
     background-color: #F5F5F5;
     
 }
-
+img{
+    width: 100%;
+    height: 100%;
+}
 /*定义滚动条轨道 内阴影+圆角*/
 ::-webkit-scrollbar-track
 {
@@ -33,6 +36,18 @@
     box-shadow: inset 0 0 6px rgba(255,255,255,.3);
     background-color: #333;
 }
+
+.now_price{
+    color: #ff6700!important;
+}
+.org_price{
+    text-decoration: line-through!important;
+    color: #777!important;
+}
+.price::after{
+    content: "元";
+}
+
 html{
     height: 100%;
     body{
@@ -691,16 +706,94 @@ html{
                             // box-shadow: 0 0 1px #000;
                             float: left;
                             position: relative;
-                            cursor: pointer;
-                            background: #fff
+                            text-align: center;
+                            .group_block_content{
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                box-sizing: border-box;
+                                background: #fff;
+                                transition: .3s;
+                                overflow: hidden;
+                                .content_img{
+                                    width: 160px;
+                                    height: 160px;
+                                    margin: 10px auto ;
+                                    cursor: pointer;
+                                    img{
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                >a{
+                                    display: block;
+                                    color: #333
+                                }
+                                >span{
+                                    display: block;
+                                    height: 18px;
+                                    font-size: 12px;
+                                    color: #aaa
+                                }
+                                >p{
+                                    height: 30px;
+                                    line-height: 30px;
+                                    color: #ff6700; 
+                                }
+                                .group_block_bottom{
+                                    position: absolute;
+                                    bottom: -90px;//-90
+                                    left: 0;
+                                    width: 100%;
+                                    height: 90px;
+                                    background: #ff6700;
+                                    color: #fff;
+                                    transition: .3s;
+                                    text-align: left;
+                                    padding: 10px 30px ;
+                                    box-sizing: border-box;
+                                    span{
+                                        font-size: 12px;
+                                        color: #ffc299
+                                    }
+                                }
+                            }
+                            .group_block_content_helf{
+                                height: 300px;
+                                margin-bottom: 10px;
+                                box-sizing: border-box;
+                                background: #fff;
+                                transition: .3s;
+                                position: relative;
+                                cursor: pointer;
+                            }
+                            .group_block_content_helf:hover{
+                                top:-3px;
+                                box-shadow:0px 0px 10px #d4d4d4;
+                                transition: .3s
+                            }
                         }
                         .group_block:hover{
-                            box-shadow: 1px 1px 3px 2px #ccc;
                            
+                           .group_block_content{
+                                position: absolute;
+                                top:-3px;
+                                box-shadow:0px 0px 10px #d4d4d4;
+                                transition: .3s;
+                                .group_block_bottom{
+                                    position: absolute;
+                                    bottom:0px;
+                                    transition: .3s;
+                                }
+                           }    
                         }
                         ._sm{
+                            padding: 20px 0;
                             height: 300px;
-                            margin: 0 0 10px 10px
+                            margin: 0 0 10px 10px;
+                            box-sizing: border-box;
                         }
                         ._lg{
                             height: 610px;
@@ -714,7 +807,8 @@ html{
                             left: 83.5px;
                             text-align: center;
                             background: #83c44e;
-                            color: #fff
+                            color: #fff;
+                            z-index: 10;
                         }
                         .dec200::before{
                             content: '减200元';
@@ -725,7 +819,8 @@ html{
                             left: 83.5px;
                             text-align: center;
                             background: #e53935;
-                            color: #fff
+                            color: #fff;
+                            z-index: 10;
                         }
                         .dec50::before{
                             content: '减50元';
@@ -736,7 +831,8 @@ html{
                             left: 83.5px;
                             text-align: center;
                             background: #e53935;
-                            color: #fff
+                            color: #fff;
+                            z-index: 10;
                         }
                         .eight_p::before{
                             content: '享8折';
@@ -747,9 +843,19 @@ html{
                             left: 83.5px;
                             text-align: center;
                             background: #e53935;
-                            color: #fff
+                            color: #fff;
+                            z-index: 10;
                         }
-                }
+                     }
+                    .body_line{
+                        width: 100%;
+                        height: 120px;
+                        margin: 40px 0  30px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
                 }
             }
         }
