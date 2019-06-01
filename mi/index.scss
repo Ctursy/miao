@@ -281,11 +281,20 @@ html{
                     }
                     
                 }
+                .banner_serch:hover{
+                    .banner_serch_icon,.banner_serch_input{
+                        border: 1px solid #999;
+                    }
+                    .banner_serch_input{
+                        border-right: none;
+                    }
+                }
                .banner_serch{
                     
                     float: right;
                     height: 52px;
                     margin-top: 24px;
+                    position: relative;
                 //    width: ;
                     .banner_serch_input{
                         width: 250px;
@@ -333,15 +342,35 @@ html{
                     .banner_serch_input:focus+i{
                         border: 1px solid #ff6700;
                     }  
-                }
-               .banner_serch:hover{
-                    .banner_serch_icon,.banner_serch_input{
-                        border: 1px solid #999;
+                    .banner_serch_input:focus ~.banner_serch_tips{
+                      display: none;
+                    }  
+                    .banner_serch_tips{
+                    
+                        height: 16px;
+                        background: #eee;
+                      
+                        padding: 4px;
+                        font-size: 12px;
+                        color: #777;
+                        cursor: pointer;
                     }
-                    .banner_serch_input{
-                        border-right: none;
+                    .tip1{
+                        position: absolute;
+                        right: 60px;
+                        top: 16px;
+                    }
+                    .tip2{
+                        position: absolute;
+                        right: 105px;
+                        top: 16px;
+                    }
+                    .banner_serch_tips:hover{
+                        color: #fff;
+                        background-color: #ff6700
                     }
                 }
+               
                 .banner_content{
                     width: 100%;
                     position: relative;
@@ -858,6 +887,15 @@ html{
                     }
                 }
             }
+        }
+        aside{
+            position: fixed;
+            right: 0;
+            bottom: 100px;
+            width: 84px;
+            height: 560px;
+            background: #eee;
+            z-index: 100
         }
     }
 }
