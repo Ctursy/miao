@@ -1028,6 +1028,11 @@ html body aside ul li i.icon {
   font-size: 30px;
 }
 
+html body aside ul li:hover {
+  cursor: pointer;
+  color: #ff6700;
+}
+
 @media (max-width: 1226px) {
   aside {
     width: 0px !important;

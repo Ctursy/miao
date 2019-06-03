@@ -915,6 +915,10 @@ html{
                     }
                   
                 }
+                li:hover{
+                    cursor: pointer;
+                    color: #ff6700;
+                }
             }
         }
     }
