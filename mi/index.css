@@ -1002,9 +1002,39 @@ html body aside {
   right: 0;
   bottom: 100px;
   width: 84px;
-  height: 560px;
-  background: #eee;
+  height: 450px;
+  background: #fff;
   z-index: 100;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+html body aside ul li {
+  height: 90px;
+  width: 84px;
+  text-align: center;
+  color: #777;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0 0 1px #eee;
+          box-shadow: 0 0 1px #eee;
+  padding-top: 15px;
+}
+
+html body aside ul li i.icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  font-size: 30px;
+}
+
+@media (max-width: 1226px) {
+  aside {
+    width: 0px !important;
+    -webkit-transition: .5s;
+    transition: .5s;
+    overflow: hidden;
+  }
 }
 
 @-webkit-keyframes scal {

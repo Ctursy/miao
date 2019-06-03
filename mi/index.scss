@@ -893,14 +893,41 @@ html{
             right: 0;
             bottom: 100px;
             width: 84px;
-            height: 560px;
-            background: #eee;
-            z-index: 100
+            height: 450px;
+            background: #fff;
+            z-index: 100;
+            transition: .5s;
+            ul{
+                li{
+                    height: 90px;
+                    width: 84px;
+                    text-align: center;
+                    color: #777;
+                    box-sizing: border-box;
+                    // border-bottom:1px solid #eee;
+                    box-shadow: 0 0 1px #eee;
+                    padding-top: 15px;
+                    i.icon{
+                        display: inline-block;
+                        height: 30px;
+                        width: 30px;
+                        font-size: 30px
+                    }
+                  
+                }
+            }
         }
     }
+
 }
  
-
+@media(max-width:1226px){
+    aside{
+      width: 0px!important;
+      transition: .5s;
+      overflow: hidden;
+    }
+}
 @keyframes scal{
     0% {
         -webkit-transform: scale(1, 0.5);
