@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.package{
+    width: 500px;
+    height: 500px;
+    border: 3px solid #333;
+    perspective: 800px;
+    .cube{
+        position: relative;
+        // left: 100px;
+        // top: 100px;
+        // perspective: 800px;
+        width: 500px;
+        height: 500px;
+        transform-style: preserve-3d;
+        transform: rotate3d(1,1,0,0deg);
+        animation: turn 10s linear infinite;
+        .plane{
+            position: absolute;
+            // left: 100px;
+            // top: 100px;
+            width: 300px;
+            height: 300px;
+            box-sizing: border-box;
+            // border: 3px solid #333;
+            font-size: 60px;
+            font-weight: 600;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .first{
+            position: absolute;
+            left: 100px;
+            top: -50px;
+            background: rgba($color: #ff4f00, $alpha: .5);
+            transform: rotate3d(1,0,0,90deg) ;
+        }
+        .second{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: rgba($color: #00ac6b, $alpha: .5);
+            transform:translate3d(0,0,-150px)
+        }
+        .third{
+            position: absolute;
+            left: 100px;
+            top: 250px;
+            background: rgba($color: #1924b1, $alpha: .5);
+            // transform:translate3d(0,0,150px);
+            transform: rotate3d(1,0,0,90deg) ;
+        }
+        .forth{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: rgba($color: #9702a7, $alpha: .5);
+            transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 150px);
+        }
+        .fifth{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: rgba($color: #ffe400, $alpha: .5);
+            transform: rotate3d(0,1,0,90deg) translate3d(0,0,-150px);;
+        }
+        .sixth{
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            background: rgba($color: #e7003e, $alpha: .5);
+            transform:translate3d(0,0,150px)
+        }
+    }
+    .tetrahedron{
+        width: 500px;
+        height: 500px;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: turn 10s linear infinite;
+        // transform: rotate3d(1,1,1,0deg);
+        transform: rotate3d(1, 1, 0, 45deg) 
+        
+        
+    }
+        .triangle{
+            height: 0px;
+            width: 0px;
+            position: absolute;
+            top: 100px;
+            left: 0px;                
+        }
+        .first_t{
+            border-bottom: 300px solid rgba($color: #ff6400, $alpha:.5);
+            border-left:172.4px solid transparent;                  border-right:172.4px solid transparent;   
+            transform:rotateX(-90deg) ;
+            transform-origin: bottom;
+        }
+        .second_t{
+            border-bottom: 300px solid rgba($color: #34d800, $alpha:.5);
+            border-left:172.4px solid transparent;                  border-right:172.4px solid transparent;  
+            transform:rotateX(-19.5deg) ;
+            transform-origin: bottom;        
+        }
+        .third_t{
+            border-bottom: 300px solid rgba($color: #3415b0, $alpha:.5);
+            border-left:172.4px solid transparent;                  border-right:172.4px solid transparent;   
+            transform-origin: right bottom;  
+            transform:rotateY(60deg) rotateX(19.5deg) ;
+               
+                           
+        }
+        .forth_t{
+            border-bottom: 300px solid rgba($color: #e40045, $alpha:.5);
+            border-left:172.4px solid transparent;                  border-right:172.4px solid         transparent;     
+            transform-origin: left bottom;  
+            transform:rotateY(-60deg) rotateX(19.5deg) ;
+        }                                 
+    }
+  
+
+@keyframes turn {
+    0%{
+        transform: rotate3d(1, 1, 1, 0deg);
+    }
+    100%{
+        transform: rotate3d(1, 1, 1, 360deg);
+    }
+}
