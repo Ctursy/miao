@@ -1,0 +1,390 @@
+*{
+  transition: .5s;
+  padding: 0;
+  margin: 0;
+}
+$img1_url:url(./dog.jpeg);
+$img2_url:url(./cat.jpeg);
+$img3_url:url(./cat_resever.jpg);
+body{
+  display: flex;
+  flex-wrap: wrap;
+}
+.father{
+    width:300px;
+    height:300px;
+    background: #333;
+    position: relative;
+    border-radius: 50%;
+    margin: 100px;
+    box-shadow: 0 0 5px #333;
+    min-width: 300px;
+    // flex: 1;
+    .son{
+      width:50px;
+      height:50px;
+      // background: #333;
+      position: absolute;
+      transition: 1s;
+      left: -25PX;
+      top: 0;
+      // right: 0;
+      text-align: center;
+      color: #fff;
+      line-height: 50px;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      transform-origin: 175px 25px;
+      animation: round 10s infinite linear;
+      transition: 2s;
+      &:hover{
+        .sun{
+          cursor: pointer;
+          background: #fff;
+          color: #333;
+          transition: 1s;
+          background: url('./btn_emoji_hover.png')  #fff  no-repeat;
+          background-size: 100% 100%;
+        }
+      }
+      .sun{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        background: #fff;
+        transform: rotate(90deg) ;
+        transition: 1s;
+        animation: round 10s reverse infinite linear;
+        background: url('./btn_emoji.png') #fff no-repeat;
+        background-size: 100% 100%;
+        box-shadow: 0 0 5px #333
+      } 
+    }
+  }
+  @keyframes round{
+    0%{
+      transform: rotate(0deg) ;
+    }
+    100%{
+      transform: rotate(360deg) ;
+    }
+  }
+
+  // ----------------------------时钟
+  @mixin center{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+  }
+  @mixin test {
+      box-shadow: 0 0  5px #333; 
+  }
+  @mixin bringt {
+    box-shadow: 0 0  3px #fff; 
+}
+  .clock{
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background: #333;
+    min-width: 300px;
+    flex:1;
+    .dial{
+      width: 300px;
+      height: 300px;
+      background: #fff;
+      @include center;
+      border-radius: 50%;
+      .scale{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        // box-shadow: 0 0 5px #333; 
+        @include center;
+        .sc{
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          position: absolute;
+          font-size: 20px;
+          position: absolute;
+          left: 125px - 15px;
+          top: -15px;
+          transform-origin: 15px 140px;
+        }
+        .sc:nth-child(1){
+          transform: rotate(30deg);
+          .number{
+            transform: rotate(-30deg)
+          }
+        }
+        .sc:nth-child(2){
+          transform: rotate(60deg);
+          .number{
+            transform: rotate(-60deg)
+          }
+        }
+        .sc:nth-child(3){
+          transform: rotate(90deg);
+          .number{
+            transform: rotate(-90deg)
+          }
+        }
+        .sc:nth-child(4){
+          transform: rotate(120deg);
+          .number{
+            transform: rotate(-120deg)
+          }
+        }
+        .sc:nth-child(5){
+          transform: rotate(150deg);
+          .number{
+            transform: rotate(-150deg)
+          }
+        }
+        .sc:nth-child(6){
+          transform: rotate(180deg);
+          .number{
+            transform: rotate(-180deg)
+          }
+        }
+        .sc:nth-child(7){
+          transform: rotate(210deg);
+          .number{
+            transform: rotate(-210deg)
+          }
+        }
+        .sc:nth-child(8){
+          transform: rotate(240deg);
+          .number{
+            transform: rotate(-240deg)
+          }
+        }
+        .sc:nth-child(9){
+          transform: rotate(270deg);
+          .number{
+            transform: rotate(-270deg)
+          }
+        }
+        .sc:nth-child(10){
+          transform: rotate(300deg);
+          .number{
+            transform: rotate(-300deg)
+          }
+        }
+        .sc:nth-child(11){
+          transform: rotate(330deg);
+          .number{
+            transform: rotate(-330deg)
+          }
+        }
+        .sc:nth-child(12){
+          transform: rotate(360deg);
+          .number{
+            transform: rotate(-360deg)
+          }
+        }
+      }
+      .pointer{
+        @include center;
+        .center{
+          width: 20px;
+          height: 20px;
+          background: #000;
+          border-radius: 50%;
+          @include center;
+          z-index: 100;
+        }
+        .hour{
+          @include center;
+          // @include test();
+          width: 8px;
+          height: 150px;
+        }
+        .min{
+          @include center;
+          // @include test();
+          width: 6px;
+          height: 180px;
+         
+        }
+        .sec{
+          @include center;
+          // @include test();
+          width: 4px;
+          height: 210px;
+        }
+        .hand{
+            width: 100%;
+            height: 60%;
+            position: absolute;
+            top: 0;
+            background: #333;
+            @include test();
+          }
+      }
+    }
+  }
+  .run_s{
+    animation:second 60s steps(60,start) infinite  backwards;
+  }
+  .run_m{
+    animation:second 3600s infinite  backwards;
+  }
+  .run_h{
+    animation:second 43200s infinite  backwards;
+  }
+  @keyframes second{
+    0%{
+      transform: rotate(0)
+    };
+    100%{
+      transform: rotate(360deg)
+    }
+  }
+
+  .silder{
+    min-width: 700px;
+    height: 400px;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+   
+    justify-content:center;
+    align-items:center;
+
+    .package{
+      width: 720px;
+      transform-style: preserve-3d;
+      // overflow: hidden;
+      height: 380px;
+      @include test;
+      .img_1{
+        width: 720px;
+        height: 100%;
+        display: flex;
+       
+        justify-content: space-between;
+        // transform:  ;
+       
+        // transform:;
+        .pice{
+          width: 140px;
+          // flex: 0;
+          // @include test;
+          transform:  rotate3d(0,1,0,-90deg);
+         
+          background:$img1_url;
+          background-size: 500% 100%;
+          position: relative;
+          transform-style: preserve-3d;
+          transform-origin: 50% 50% -70px;
+          
+          .bottom{
+            width: 140px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include bringt;
+            transform: translateZ(-140px);
+            background: rgba($color: red, $alpha: .2);
+            background: $img2_url;
+            background-size: 500% 100%;
+          }
+          .left{
+            width: 140px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include bringt;
+            transform: rotateY(90deg) translateZ(-70px) translateX(70px);
+            background: rgba($color: yellow, $alpha: .2);
+            background: $img3_url;
+            background-size: 500% 100%;
+          }
+          .right{
+            width: 140px;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            @include bringt;
+            transform: rotateY(90deg) translateZ(70px) translateX(70px);
+            background: rgba($color: blue, $alpha: .2);
+            background: $img2_url;
+            background-size: 500% 100%;
+          }
+        }
+        .pice:nth-child(1){
+          animation: 5s 3s turn_round ease forwards alternate-reverse infinite;
+        }
+        .pice:nth-child(2){
+          animation: 5s 3s turn_round ease-in-out forwards alternate-reverse infinite;
+          background-position: 25% 0px;
+          div{
+            background-position: 25% 0px;
+          }
+        }
+        .pice:nth-child(3){
+          animation: 5s 3s  turn_round ease-in forwards alternate-reverse infinite;
+          background-position: 50% 0px;
+          div{
+            background-position: 50% 0px
+          }
+        }
+        .pice:nth-child(4){
+          animation: 5s 3s  turn_round ease-in-out forwards alternate-reverse infinite;
+          background-position: 75% 0px;
+          div{
+            background-position:  75% 0px;
+          }
+        }
+        .pice:nth-child(5){
+          animation: 5s 3s   turn_round ease-out forwards alternate-reverse infinite;
+          background-position: 100% 0px;
+          div{
+            background-position:   100% 0px;
+          }
+        } 
+      }
+    }
+    
+  
+  }
+
+  @keyframes turn_round{
+    0%{
+      transform: rotate3d(0,1,0,-90deg);
+    }
+  
+  
+    100%{
+      transform: rotate3d(0,1,0,0deg);
+      background-size: 500% 100%;
+     
+    }
+
+  }
+  @keyframes shake{
+    0%{
+      transform: rotate3d(0,1,0,-90deg);
+    }
+    0%{
+      transform: rotate3d(0,1,0,-90deg);
+    }
+  
+    100%{
+      transform: rotate3d(0,1,0,0deg);
+      background-size: 500% 100%;
+     
+    }
+
+  }
+ 

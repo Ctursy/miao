@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>round</title>
+  <link rel="stylesheet" href="./clock.css">
+</head>
+<body>
+  <div class="father">
+    <div class="son">
+       <div class="sun"> </div>
+    </div>
+  </div>
+
+  <div class="clock">
+      <div class="dial">
+        <div class="scale">
+            <div class="sc"><div class="number">1</div></div>
+            <div class="sc"><div class="number">2</div></div>
+            <div class="sc"><div class="number">3</div></div>
+            <div class="sc"><div class="number">4</div></div>
+            <div class="sc"><div class="number">5</div></div>
+            <div class="sc"><div class="number">6</div></div>
+            <div class="sc"><div class="number">7</div></div>
+            <div class="sc"><div class="number">8</div></div>
+            <div class="sc"><div class="number">9</div></div>
+            <div class="sc"><div class="number">10</div></div>
+            <div class="sc"><div class="number">11</div></div>
+            <div class="sc"><div class="number">12</div></div>
+        </div>
+        <div class="pointer">
+            <div class="center"></div>
+            <div class="hour">
+                <div class="hand"></div>
+            </div>
+            <div class="min">
+                <div class="hand"></div>
+            </div>
+            <div class="sec">
+                <div class="hand"></div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="silder">
+      <div class="package">
+        <div class="img_1 animation">
+            <div class="pice">
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="pice">
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="pice">
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="pice">
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+            <div class="pice">
+                <div class="bottom"></div>
+                <div class="left"></div>
+                <div class="right"></div>
+            </div>
+        </div>
+        <div class="img_2"></div>
+      </div>
+  </div>
+</body>
+</html>
+<script>
+    function getDate(){
+        var date = new Date()
+        var month = date.getMonth() + 1; // 月份
+        var day = date.getDate();// 日
+        var hour = date.getHours()>12?date.getHours()-12:date.getHours(); // 小时
+        var min = date.getMinutes(); // 分
+        var sec = date.getSeconds( )//秒
+
+        var dom_hour = document.getElementsByClassName('hour')[0]
+        var dom_min = document.getElementsByClassName('min')[0]
+        var dom_sec = document.getElementsByClassName('sec')[0]
+        // console.log(hour)
+        // console.log(min)
+        // console.log(sec)
+        dom_hour.style.transform = "rotate("+(hour+min/60)*30 +"deg)";
+        dom_min.style.transform = "rotate("+(min+sec/60)*6 +"deg)";
+        dom_sec.style.transform = "rotate("+sec*6 +"deg)";
+
+        // dom_hour.classList.add('run_h')
+        // dom_min.classList.add('run_m')
+        // dom_sec.classList.add('run_s')
+    }
+    setInterval(() => {
+        getDate()
+    }, 1000);
+   
+</script>
