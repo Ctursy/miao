@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  height: 100%;
+  background: #ffd748;
+}
+
+.package {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.package .haeder h1 {
+  margin-top: 60px;
+  color: #ff3d2e;
+  font-size: 60px;
+  font-weight: 600;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.package .haeder h2 {
+  font-size: 40px;
+  margin-top: 30px;
+  font-weight: 400;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.package .haeder p {
+  margin-top: 30px;
+  font-size: 20px;
+  text-indent: 2em;
+  line-height: 30px;
+  word-spacing: .2em;
+  letter-spacing: .08em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.package .btn_list {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 300px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.package .btn_list button {
+  width: 150px;
+  height: 50px;
+  background: #ff3d2e;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 5px;
+  position: relative;
+  z-index: 100;
+}
+
+.package .btn_list button:hover {
+  background: #c02e23;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.package .btn_list button::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.package .btn_list button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.package .btn_list button[data-balloon-pos="up"]:hover::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 1;
+  top: -40px;
+}
+
+.package .btn_list button[data-balloon-pos="up"]:hover::after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotateZ(45deg);
+          transform: translateX(-50%) rotateZ(45deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: -12px;
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="left"]:hover::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  left: calc(-50% - 4px);
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="left"]:hover::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotateZ(45deg);
+          transform: translateY(-50%) rotateZ(45deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+  left: -12px;
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="right"]:hover::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  left: 155px;
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="right"]:hover::after {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) rotateZ(45deg);
+          transform: translateY(-50%) rotateZ(45deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+  left: 152px;
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="down"]:hover::before {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: 55px;
+  opacity: 1;
+}
+
+.package .btn_list button[data-balloon-pos="down"]:hover::after {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotateZ(45deg);
+          transform: translateX(-50%) rotateZ(45deg);
+  -webkit-transition: .5s;
+  transition: .5s;
+  top: 52px;
+  opacity: 1;
+}
+
+.package .btn_list button::before {
+  content: attr(data-balloon);
+  max-width: 150px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  height: 15px;
+  white-space: nowrap;
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 10;
+}
+
+.package .btn_list button::after {
+  content: '';
+  background: #333;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.package .btn_list button:focus {
+  outline: none;
+}
+/*# sourceMappingURL=balloon.css.map */

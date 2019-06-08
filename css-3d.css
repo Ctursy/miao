@@ -9,6 +9,7 @@
   border: 3px solid #333;
   -webkit-perspective: 800px;
           perspective: 800px;
+  margin: 10px;
 }
 
 .package .cube {
