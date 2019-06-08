@@ -67,6 +67,8 @@ html, body {
   border-radius: 5px;
   position: relative;
   z-index: 100;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .package .btn_list button:hover {

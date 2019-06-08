@@ -85,6 +85,7 @@ html ,body{
             border-radius: 5px;
             position: relative;
             z-index: 100;
+            transition: .5s;
             &:hover{ 
                 background: #c02e23  ;
                 transition: .5s
