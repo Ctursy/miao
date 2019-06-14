@@ -1,0 +1,105 @@
+
+$bgc_colors: red, orange, yellow, green, blue, #2d0571;
+$colors:#fff400 ,#ff0d0d,#c2fb2e,#0c5aa6,#7309aa;
+@mixin colorFul_bgc {
+    background: rgba($color:  lighten(nth($bgc_colors, random(length($bgc_colors))), 20%), $alpha: .5)
+}
+@mixin colorFul {
+    background: rgba($color:  lighten(nth($colors, random(length($colors))), 20%), $alpha: 1);
+    box-shadow:0 0 2px  #333;
+    padding: 15px;
+    word-break: break-all;
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+.container-fluid{
+    width: 100%
+}
+.container{
+    
+    display: table;
+    height: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    // width: 100%;
+    // padding: 0 15px;
+    box-sizing: border-box;
+    margin: 1rem -15px
+    
+}
+.col{
+    flex-basis: 0;
+    flex: 1;
+    @include colorFul;
+    box-sizing: border-box
+}
+.col-md-auto{
+    flex: auto;
+    width: auto;
+    max-width: 100%;
+    @include colorFul
+}
+.justify-content-md-center{
+    justify-content: center!important;
+}
+
+@media(min-width:1226px){
+    .container{
+        width: 1226px; 
+        @include colorFul_bgc;
+    }
+    @for $i from 1 to 13 {
+        .col-lg-#{$i} {
+           flex:0 0 $i * 100% / 12;
+           min-width: $i * 100% / 12;
+        }
+    }
+    
+}
+@media(min-width:960px) and (max-width:1226px){
+    .container{
+        width: 960px;
+        @include colorFul_bgc;
+    }
+    @for $i from 1 to 13 {
+        .col-#{$i} {
+           flex:0 0 $i * 100% / 12;
+           min-width: $i * 100% / 12;
+        }
+    }
+    
+}
+@media(min-width:640px) and (max-width:960px){
+    .container{
+        width: 640px;
+        @include colorFul_bgc;
+    }
+    @for $i from 1 to 13 {
+        .col-md-#{$i} {
+           flex:0 0 $i * 100% / 12;
+           min-width: $i * 100% / 12;
+        }
+    }
+    
+}
+@media(max-width:640px) {
+    .container{
+        width:100%;
+        @include colorFul_bgc;
+    }
+    @for $i from 1 to 13 {
+        .col-sm-#{$i} {
+           flex:0 0 $i * 100% / 12;
+           min-width: $i * 100% / 12;
+        }
+    }
+}

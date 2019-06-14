@@ -1,0 +1,26 @@
+.navbar{
+   margin-top: 15px;
+   border-radius: 5px;
+   z-index: 10;
+}
+.active{
+    background: #111
+}
+#btnGroupDrop1{
+    background: #343a40;
+    border: none
+}
+#btnGroupDrop1 button:focus{
+    
+}
+.bd-slider {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /* overflow: hidden; */
+}
+.bd-slider img{
+    height:540px ;
+}
