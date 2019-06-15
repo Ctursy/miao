@@ -757,25 +757,15 @@
   var M = +prompt('M')
   var N = +prompt('N')
   var X = +prompt('X')
-  // var X_start = Math.ceil(M/N) //初始补充能量需要元素个数
-  //  X = X - X_start //剩余元素个数
-  //  //回复满状态 去参加战斗！
-  //  N_grow = Math.floor(M/N)
-  //  N = N + N_grow
-  //  //战斗力提升，恢复体力
-  //  var X_start = Math.ceil(M/N)
-  //  X = X - X_start //剩余元素个数
    function fight(n,x){
       var X_emainder = x - Math.ceil(M/n)//补充体力后剩余能量元素个数
       if(X_emainder<0){
         console.log(n)
         return//能量元素不足
-
       }else{
         var N_growed = n + Math.floor(M/n);
         fight(N_growed,X_emainder)
       }
-    
    }
    fight(N,X)
 </script>
