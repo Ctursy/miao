@@ -386,7 +386,7 @@
   }
   console.log(sum)
 </script>
-<script type="" id="ch0105/10">
+<script type="x" id="ch0105/10">
   var m = +prompt('m')
   var n = +prompt('n')
   var sum = 0
@@ -395,15 +395,48 @@
   }
   console.log(sum)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/11">
+  var n = +prompt('k')
+  var arr = []
+  var one = 0
+  var five = 0
+  var ten = 0
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  for(let i in arr){
+    arr[i]==1?one++:null
+    arr[i]==5?five++:null
+    arr[i]==10?ten++:null
+  }
+  console.log(one,five,ten)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/12">
+  var n = +prompt('N')
+  var m = +prompt('m')
+  var arr = []
+  var count = 0
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  for(let i in arr){
+    arr[i]==m?count++:null
+  }
+  console.log(count)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/13">
+  var a = +prompt('a')
+  var n = +prompt('n')
+  console.log(Math.pow(a,n))
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/14">
+  var x = +prompt('人口基数')
+  var n = +prompt('年数')
+  console.log((x * Math.pow(1.001,n)).toFixed(4))
+</script>
+<script type="" id="ch0105/15">
+  var R = +prompt('投资的复合年利率R')
+  var M = +prompt('总值M')
+  var Y = +prompt('投资Y年')
+  console.log(Math.floor(M * Math.pow(1+R/100,Y)))
 </script>
