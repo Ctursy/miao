@@ -318,7 +318,7 @@
   })
   console.log((all/n).toFixed(4))
 </script>
-<script type="" id="ch0105/04">
+<script type="x" id="ch0105/04">
   var n = +prompt('n')
   var arr = []
   for(let i = 0;i < n;i++){
@@ -327,13 +327,23 @@
   var all = arr.reduce((pre,cur,index,arr)=>{
     return pre+cur
   })
-  console.log(all.toFixed(0),(all/n).toFixed(5))
+  console.log(all,(all/n).toFixed(5))
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/05">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  console.log(arr.sort()[arr.length-1])
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="" id="ch0105/06">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  console.log(arr.sort()[arr.length-1]-arr.sort()[0])
 </script>
 <script type="x" id="ch0105/02">
 
