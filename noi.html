@@ -434,9 +434,123 @@
   var n = +prompt('年数')
   console.log((x * Math.pow(1.001,n)).toFixed(4))
 </script>
-<script type="" id="ch0105/15">
+<script type="x" id="ch0105/15">
   var R = +prompt('投资的复合年利率R')
   var M = +prompt('总值M')
   var Y = +prompt('投资Y年')
   console.log(Math.floor(M * Math.pow(1+R/100,Y)))
+</script>
+<script type="x" id="ch0105/16">
+  var N = +prompt('年薪')
+  var K = +prompt('房价增长率')
+  for(let i = 1 ;i <= 21;i++){
+    var pay_sum = N*i;
+    var house_sum = 200*Math.pow(1+K/100,i-1) 
+    if(pay_sum>=house_sum){
+      console.log(i);
+      break
+    }
+    if(i>20){
+      console.log('Impossible')
+    }
+  }
+  console.log( )
+</script>
+<script type="x" id="ch0105/17">
+  var k = +prompt('k')
+  var a = [1,1]
+  for(let i = 2;i<=k-1;i++){
+    a[i] = a[i-2] + a[i-1]
+  }
+  console.log(a[k-1])
+</script>
+<script type="x" id="ch0105/18">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i]=[]
+    arr[i][0] = +prompt('总病例数')
+    arr[i][1] = +prompt('有效病例数')
+  }
+  var ocktail = arr[0][1]/arr[0][0]
+  arr.shift()
+  for(let i in arr){
+     arr[i][1]/arr[i][0] - ocktail >0.05?console.log('better'): arr[i][1]/arr[i][0] - ocktail <-0.05?console.log('worse'):console.log('same')
+  }
+</script>
+<script type="x" id="ch0105/19">
+  var n = +prompt('屋顶数')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i]=[]
+    arr[i][0] = +prompt('第'+(i+1)+'个屋顶x坐标')
+    arr[i][1] = +prompt('第'+(i+1)+'个屋顶y坐标')
+    arr[i][2] = +prompt('人数')
+  }
+  var all_time = 0;
+  for(let i in arr){
+    all_time +=  Math.ceil(Math.sqrt(Math.pow(arr[i][0],2)+Math.pow(arr[i][1],2))/25 + arr[i][2]*1.5)
+  }
+  console.log(all_time)
+</script>
+<script type="" id="ch0105/20">
+  var h = +prompt('高度')
+  var arr= [h]
+  for(let i = 1;i < 11;i++){
+    arr[i] = arr[i-1]/2
+  }
+  s = arr.reduce((pre,cur,index,arr)=>{
+    return pre + cur
+  })*2-arr[0]-2*arr[10]
+  console.log(s,arr[10])
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
+</script>
+<script type="" id="ch0105/16">
 </script>
