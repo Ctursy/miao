@@ -200,7 +200,7 @@
     console.log((x/2-1.5).toFixed(3))
   }else{}
 </script>
-<script type="" id="ch0104/14">
+<script type="x" id="ch0104/14">
   var weight = +prompt('weight')
   var j = prompt('j')
   var price = 0
@@ -285,4 +285,77 @@
   var y = +prompt('y')
   var remnant = n - Math.ceil( y / x );
   console.log(remnant)
+</script>
+<script type="x" id="ch0105/01">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个学生年龄')
+  }
+  var all = arr.reduce((pre,cur,index,arr)=>{
+    return pre+cur
+  })
+  console.log((all/n).toFixed(2))
+</script>
+<script type="x" id="ch0105/02">
+  var balance = []
+  for(let i = 0;i<12;i++){
+    balance[i] = +prompt('第'+(i+1)+'个月结余')
+  }
+  var all = balance.reduce((pre,cur,index,arr)=>{
+    return pre+cur
+  })
+  console.log('$'+(all/balance.length).toFixed(2))
+</script>
+<script type="x" id="ch0105/03">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  var all = arr.reduce((pre,cur,index,arr)=>{
+    return pre+cur
+  })
+  console.log((all/n).toFixed(4))
+</script>
+<script type="" id="ch0105/04">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i] = +prompt('第'+(i+1)+'个数')
+  }
+  var all = arr.reduce((pre,cur,index,arr)=>{
+    return pre+cur
+  })
+  console.log(all,(all/n).toFixed(4))
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
+</script>
+<script type="x" id="ch0105/02">
+
 </script>
