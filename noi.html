@@ -508,6 +508,10 @@
   var N = +prompt('N')
   function kakutani(n) {
     var num = n
+    if(n==1){
+      console.log('End')
+      return
+    }
     if(n%2==1){
       num = n*3+1
       console.log(n+'*3+1='+(n*3+1))
