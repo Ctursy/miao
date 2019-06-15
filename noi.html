@@ -504,7 +504,7 @@
   })*2-arr[0]-2*arr[10]).toFixed(4)
   console.log(s,arr[10].toFixed(7))
 </script>
-<script type="" id="ch0105/21">
+<script type="x" id="ch0105/21">
   var N = +prompt('N')
   function kakutani(n) {
     var num = n
@@ -529,31 +529,199 @@
   }
   kakutani(N)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/22">
+  var arr = []
+  for(let i = 0;i < 12;i++){
+    arr[i] = prompt('第'+(i+1)+'个月预算')
+  }
+  var sum = 0
+  var deposit = 0
+  is_Overspending = false
+  for(let i in arr){
+    sum+=300;
+    if(sum - arr[i] <0){
+      console.log('-'+(+i+1))
+      is_Overspending = true
+      break
+    }else{
+      sum = sum-arr[i]
+      if(sum >= 100){
+        deposit += Math.floor(sum/100)*100;
+        sum = sum - Math.floor(sum/100)*100;
+      }
+    }
+  }
+  is_Overspending?null:console.log(sum+deposit*1.2)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/23">
+    var m = prompt('药品总量')
+    var n = prompt('取药总人数')
+    var no_medicine = 0
+    var arr = []
+    for(let i = 0; i < n; i++){
+      arr[i] = prompt('第'+(+i+1)+'个病人期望药量')
+    }
+    for(let i in arr){  
+      if( m - arr[i]<0){
+        no_medicine++ 
+      }else{
+        m = m - arr[i]
+      }
+    }
+    console.log(no_medicine)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/24">
+    var n = prompt('测量次数')
+    arr = []
+    for(let i = 0; i < n; i++){
+      arr[i]=[]
+      arr[i][0] = prompt('第'+(+i+1)+'个病人高压')
+      arr[i][1] = prompt('第'+(+i+1)+'个病人低压')
+    }
+    var nomal_time = 0
+    var nomal_arr = []
+    for(let i in arr){
+      if(arr[i][0] >=90 && arr[i][0] <= 140 && arr[i][1] >= 60 && arr[i][1] <= 90){
+        nomal_time+=1
+      }else if( i<arr.length-1){
+        nomal_arr.push(nomal_time)
+        nomal_time=0
+      }
+      if(i==arr.length-1){
+        nomal_arr.push(nomal_time)
+      }
+       
+    }
+
+    console.log(nomal_arr.sort()[nomal_arr.length-1] )
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/25">
+  var nine_digit_max = 8*Math.pow(9,2)+ 8*Math.pow(9,1)+ 8*Math.pow(9,0)
+  var nine_digit_min = Math.pow(7,2)
+  for(let i = nine_digit_min;i<=nine_digit_max;i++){
+    i.toString(9).split('').reverse().join('') == i.toString(7)?console.log(i,i.toString(7),i.toString(9)):null
+  }
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/26">
+  var n = prompt('n')
+  var arr = []
+  for(let i = 0; i < n;i++){
+    arr[i] = prompt('第'+(+i+1)+'个数字')
+  }
+  var count = 0
+  for(let i in arr){
+    var a = arr[i].toString().split('');
+    if(a[3]-a[0]-a[1]-a[2]>0){
+      count+=1
+    }
+  
+  }
+  console.log(count)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/27">
+    var k = +prompt('k')
+    var Sn = 0
+   for(let i = 0;i<Infinity;i++){
+      Sn+= 1/(i+1)
+      if(Sn>k){
+        console.log(i+1)
+        break
+      }
+   }
+   
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/28">
+  var n = prompt('n')
+  var arr =  n.split('').reverse()
+  for(let i in arr){
+    console.log(arr[i])
+  }
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/29">
+  var n = prompt('n')
+  var arr = n.split('')
+  if(n<0){
+    arr.shift()
+    console.log(-arr.reverse().join('')*1)
+  }else{
+    console.log(arr.reverse().join('')*1)
+  }
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/30">
+  var m = prompt('m')
+  var k = +prompt('k')
+  count = 0
+  var arr = m.split('')
+  for(let i in arr){
+    if(arr[i]=='3'){
+      count+=1
+    }
+  }
+  console.log(m%19==0&&count==k?'YES':'NO')
+
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/31">
+  var N = +prompt('N')
+  var M = +prompt('M')
+  var arr_light=[]
+  var arr_person=[]
+  for(let i =0;i<N;i++){
+    arr_light.push(true)
+  }  
+  for(let i =0;i<M;i++){
+    arr_person.push(i+1)
+  }
+  for(let i in arr_person){
+    for(let k in arr_light){
+      (+k+1)%arr_person[i]==0?arr_light[k] = !arr_light[k]:null
+    }
+  }
+  for(let k in arr_light){
+    // debugger
+    if(!arr_light[k]){
+      console.log(+k+1)
+    }
+  }
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/32">
+  var n = +prompt('n')
+  var arr_p = [1]
+  var arr_q = [2]
+  for(let i = 1;i < n;i++){
+    arr_p[i] = arr_q[i-1]
+    arr_q[i] = arr_p[i-1] + arr_q[i-1]
+  }
+  var s = 0
+  for(let i in arr_p){
+    s+= arr_q[i]/arr_p[i]
+  }
+  console.log(s.toFixed(4))
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/33">
+  var n = +prompt('n')
+  var sum = 0
+  for(let i = 1; i <= n;i++){
+    sum+= Math.pow(-1,i-1)/i
+  }
+
+  console.log(sum.toFixed(4))
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/34">
+  var n = +prompt('n')
+  var sum = 0
+  for(let i =1;i<=n;i++){
+    sum+=factorial(i)
+  }
+  function factorial(x){
+    var i = 1
+    var result = 1
+    while (i<=x) {
+      result = result*i;
+      i++
+    }
+    return result
+  }
+  console.log(sum)
 </script>
 <script type="" id="ch0105/16">
 </script>
