@@ -599,7 +599,7 @@
   var nine_digit_max = 8*Math.pow(9,2)+ 8*Math.pow(9,1)+ 8*Math.pow(9,0)
   var nine_digit_min = Math.pow(7,2)
   for(let i = nine_digit_min;i<=nine_digit_max;i++){
-    i.toString(9).split('').reverse().join('') == i.toString(7)?console.log(i,i.toString(7),i.toString(9)):null
+    i.toString(9).split('').reverse().join('') == i.toString(7)?console.log(i,i.toString(7)*1,i.toString(9)*1):null
   }
 </script>
 <script type="x" id="ch0105/26">
@@ -677,10 +677,12 @@
     }
   }
   for(let k in arr_light){
+    var arr = []
     // debugger
     if(!arr_light[k]){
-      console.log(+k+1)
+      arr.push(+k+1)
     }
+    console.log(arr.join(','))
   }
 </script>
 <script type="x" id="ch0105/32">
@@ -723,7 +725,22 @@
   }
   console.log(sum)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/16">
+ var n = +prompt('n')
+ var e = 0
+ for(let i =1;i<=n;i++){
+    e+=i/factorial(i)
+  }
+ function factorial(x){
+    var i = 1
+    var result = 1
+    while (i<=x) {
+      result = result*i;
+      i++
+    }
+    return result
+  }
+  console.log(e.toFixed(10))
 </script>
 <script type="" id="ch0105/16">
 </script>
