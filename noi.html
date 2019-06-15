@@ -337,7 +337,7 @@
   }
   console.log(arr.sort()[arr.length-1])
 </script>
-<script type="" id="ch0105/06">
+<script type="x" id="ch0105/06">
   var n = +prompt('n')
   var arr = []
   for(let i = 0;i < n;i++){
@@ -345,17 +345,55 @@
   }
   console.log(arr.sort()[arr.length-1]-arr.sort()[0])
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/07">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n;i++){
+    arr[i]=[]
+    arr[i][0] = +prompt('第'+(i+1)+'天金牌数')
+    arr[i][1] = +prompt('第'+(i+1)+'天银牌数')
+    arr[i][2] = +prompt('第'+(i+1)+'天铜牌数')
+  }
+  var gold = arr.reduce((pre,cur,index,arr)=>{
+    // debugger
+    return [pre[0]+cur[0]]
+  })[0]
+  var silver = arr.reduce((pre,cur,index,arr)=>{
+    return [0,pre[1]+cur[1]]
+  })[1]
+  var copper = arr.reduce((pre,cur,index,arr)=>{
+    return [0,0,pre[2]+cur[2]]
+  })[2]
+  console.log(gold,silver,copper,gold+silver+copper)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/08">
+ var n = +prompt('n')
+  var arr = []
+  for(let i = 0;i < n-1;i++){
+    arr[i] = +prompt('第'+(i+1)+'个角角度')
+  }
+  var all = arr.reduce((pre,cur,index,arr)=>{
+    return pre+cur
+  })
+  console.log((n-2)*180 - all)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="x" id="ch0105/09">
+  var m = +prompt('m')
+  var n = +prompt('n')
+  var sum = 0
+  for(let i =m;i<=n;i++){
+    i%2!=0?sum+=i:null
+  }
+  console.log(sum)
 </script>
-<script type="x" id="ch0105/02">
-
+<script type="" id="ch0105/10">
+  var m = +prompt('m')
+  var n = +prompt('n')
+  var sum = 0
+  for(let i = m;i <= n;i++){
+    i%17==0?sum+=i:null
+  }
+  console.log(sum)
 </script>
 <script type="x" id="ch0105/02">
 
