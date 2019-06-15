@@ -493,18 +493,37 @@
   }
   console.log(all_time)
 </script>
-<script type="" id="ch0105/20">
+<script type="x" id="ch0105/20">
   var h = +prompt('高度')
   var arr= [h]
   for(let i = 1;i < 11;i++){
     arr[i] = arr[i-1]/2
   }
-  s = arr.reduce((pre,cur,index,arr)=>{
+  s = (arr.reduce((pre,cur,index,arr)=>{
     return pre + cur
-  })*2-arr[0]-2*arr[10]
-  console.log(s,arr[10])
+  })*2-arr[0]-2*arr[10]).toFixed(4)
+  console.log(s,arr[10].toFixed(7))
 </script>
-<script type="" id="ch0105/16">
+<script type="" id="ch0105/21">
+  var N = +prompt('N')
+  function kakutani(n) {
+    var num = n
+    if(n%2==1){
+      num = n*3+1
+      console.log(n+'*3+1='+(n*3+1))
+    }else{
+      num = num/2
+      console.log(n+'/2='+n/2)
+    }
+  
+    if(num!=1){
+      kakutani(num)
+    }else{
+      console.log('End')
+    }
+   
+  }
+  kakutani(N)
 </script>
 <script type="" id="ch0105/16">
 </script>
