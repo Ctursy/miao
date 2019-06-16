@@ -769,21 +769,25 @@
    }
    fight(N,X)
 </script>
-<script type="x" id="ch0105/38">
-  var n = +prompt('n')
-  var arr = []
-  for(let i = 0; i <= n; i++){
-    arr[i] = prompt('第'+(i+1)+'个系数')
-  }
-  if(n==0){
-    console(0)
-  }else{
-    for(let i in arr){
-      if(i<n){
-        console.log((n-i)*arr[i])
+<script type="" id="ch0105/38">
+  var n = +prompt('多项式最高次幂')
+  for(let j = 0;j<n;j++){
+    var c = +prompt('次项最高次幂')
+    var arr = []
+    for(let i = 0; i <= c; i++){
+      arr[i] = prompt((i+1)+'次幂系数')
+    }
+    if(c==0){
+      console.log(0)
+    }else{
+      for(let i in arr){
+        if(i<c){
+          console.log((c-i)*arr[i])
+        }
       }
     }
   }
+
   
 </script>
 <script type="x" id="ch0105/39">
@@ -880,7 +884,7 @@
   }
   console.log(arr[arr.length-1])
 </script>
-<script type="" id="ch0105/45">
+<script type="x" id="ch0105/45">
  var n = +prompt('天数')
  var re_day = n
  var per_day = 0
