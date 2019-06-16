@@ -727,7 +727,7 @@
   }
   console.log(sum)
 </script>
-<script type="" id="ch0105/35">
+<script type="x" id="ch0105/35">
  var n = +prompt('n')
  var e = 1
  for(let i =1;i<=n;i++){
@@ -769,19 +769,138 @@
    }
    fight(N,X)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/38">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 0; i <= n; i++){
+    arr[i] = prompt('第'+(i+1)+'个系数')
+  }
+  if(n==0){
+    console(0)
+  }else{
+    for(let i in arr){
+      if(i<n){
+        console.log((n-i)*arr[i])
+      }
+    }
+  }
+  
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/39">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 1; i <= n; i++){
+      if(i%7!=0&&i.toString().indexOf('7')==-1){
+        arr.push(i)
+      }
+  }
+  var sum = 0
+  for(let i in arr){
+    sum+=Math.pow(arr[i],2)
+  }
+  console.log(sum)
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/40">
+  var n = +prompt('n')
+  var str = ''
+  for(let i = 1; i <= n; i++){
+    str+=i
+  }
+  var obj = str.split('').reduce((pre,cur)=>{
+      return (pre[cur]++||(pre[cur] = 1), pre)
+  },{})
+  console.log(obj[1])
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/41">
+  var min = +prompt('min')
+  var max = +prompt('max')
+  var str = ''
+  for(let i = min;i <= max ;i++){
+    str += i
+  }
+  var obj = str.split('').reduce((pre,cur)=>{
+      return (pre[cur]++||(pre[cur] = 1), pre)
+  },{})
+  console.log(obj[2])
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/42">
+  var h = +prompt('高度')
+  var w = +prompt('宽度')
+  var sym = prompt('符号')
+  var solid = prompt('实虚')
+  var str = []
+  for(let i = 0 ;i < h;i++){
+    str[i]==undefined?str[i]='':null
+    if(i==0||i==h-1){
+      for(let k = 0; k < w;k++){
+        str[i]+=sym
+      }
+    }else if(solid==1){
+      for(let k = 0; k < w;k++){
+        str[i]+=sym
+      }
+    }else{
+      for(let k = 0; k < w-2;k++){
+        str[i]+= ' '
+      }
+      str[i] = sym + str[i] +sym
+    }
+  
+  }
+  console.log(str.join('\n'))
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/43">
+  var n = +prompt('n')
+  var arr = []
+  for(let i = 1;i < n;i++){
+    if(n%i==0){
+      arr.push(i)
+    }
+  
+  }
+  console.log(arr.sort()[arr.length-1])
 </script>
-<script type="" id="ch0105/16">
+<script type="x" id="ch0105/44">
+  var n = +prompt('n')
+  var arr=[2]
+  for(let i = 3;i < 10000;i++){
+    var is_prime = true
+    for(let k = 2;k<i;k++){
+      if(i%k==0){
+        is_prime=false
+        break
+      }
+    }
+    if(is_prime){
+      arr.push(i)
+    }
+    if(arr.length>=n){
+      break
+    }
+  }
+  console.log(arr[arr.length-1])
 </script>
-<script type="" id="ch0105/16">
+<script type="" id="ch0105/45">
+ var n = +prompt('天数')
+ var re_day = n
+ var per_day = 0
+ var coin = 0
+ if(n==1){
+      console.log(1)
+    }else if(n==2){
+      console.log(3)
+    }else{
+      for(let i = 1;i <=n ;i++){
+        if(re_day<=0){
+          for(let k = 1;k<i;k++){
+            coin += Math.pow( k , 2 ) 
+            per_day = k
+          }
+          break
+        }
+        re_day = re_day - i
+      }
+      console.log(coin + per_day*re_day)
+    }
+  
 </script>
