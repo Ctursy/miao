@@ -3,40 +3,33 @@
   var B = +prompt()
   console.log(A+B)
 </script>
-
-
 <script type="x" id="ch0103/02">
   var a = +prompt()
   var b = +prompt()
   var c = +prompt()
   console.log((a+b)*c)
 </script>
-
 <script type="x" id="ch0103/03">
   var a = +prompt()
   var b = +prompt()
   var c = +prompt()
   console.log(Math.floor((a + b)/c))
 </script>
-
 <script type="x" id="ch0103/04">
   var a = +prompt()
   var b = +prompt()
   console.log(parseInt(a/b),a%b)
 </script>
-
 <script type="x" id="ch0103/05">
   var a = +prompt()
   var b = +prompt()
   console.log((a/b).toFixed(9))
 </script>
-
 <script type="z" id="ch0103/06">
   var a = +prompt('确诊数')
   var b = +prompt('死亡数')
   console.log((b/a*100).toFixed(3)+'%')
 </script>
-
 <script type="x" id="ch0103/07">
   var x = +prompt('x')
   var a = +prompt('a')
@@ -45,49 +38,40 @@
   var d = +prompt('d') 
   console.log(( a*x*x*x + b*x*x + c*x + d ).toFixed(7))
 </script>
-
 <script type="x" id="ch0103/08">
   var F = +prompt('F')
   console.log((5 * (F-32) / 9).toFixed(5))
 </script>
-
 <script type="x" id="ch0103/09">
   var pi = 3.14159
   var r = +prompt('r')
   console.log((2*r).toFixed(4),(2*pi*r).toFixed(4),(pi*r*r).toFixed(4))
 </script>
-
 <script type="x" id="ch0103/10">
   var r1 = +prompt('r1')
   var r2 = +prompt('r2')
   console.log(( 1/(1/r1 + 1/r2)).toFixed(2))
 </script>
-
 <script type="x" id="ch0103/11">
   var a = +prompt('a')
   var b = +prompt('b')
   console.log((a%b).toFixed(4))
 </script>
-
 <script type="x" id="ch0103/12">
   var r = +prompt('r')
   var pi = 3.14
   console.log(( 4 / 3 * (pi * Math.pow(r,3))).toFixed(2))
 </script>
-
 <script type="x" id="ch0103/13">
   var n = prompt('n')
   console.log( n.split('').reverse().join(''))
 </script>
-
 <script type="x" id="ch0103/14">
-
   var h = +prompt('h')
   var r = +prompt('r')
   var pi = 3.14
   console.log(Math.ceil(20 * 1000 / ( h * pi * Math.pow(r,2))))
 </script>
-
 <script type="x" id="ch0103/15">
   var n = +prompt('n')
   var x = +prompt('x')
@@ -225,12 +209,10 @@
   var a = [x,y,z];
   a.sort()
   console.log(Math.pow(a[2],2)>(Math.pow(a[0],2)+Math.pow(a[1],2))?'no':'yes')
-  
 </script>
 <script type="x" id="ch0104/17">
    var x = +prompt('x')
    console.log( x%400==0?'Y':(x%100==0?'N':(x%4==0?'Y':'N')))
-  
 </script>
 <script type="x" id="ch0104/18">
   var x = +prompt('x')
@@ -707,7 +689,6 @@
   for(let i = 1; i <= n;i++){
     sum+= Math.pow(-1,i-1)/i
   }
-
   console.log(sum.toFixed(4))
 </script>
 <script type="x" id="ch0105/34">
@@ -787,8 +768,6 @@
       }
     }
   }
-
-  
 </script>
 <script type="x" id="ch0105/39">
   var n = +prompt('n')
@@ -849,7 +828,6 @@
       }
       str[i] = sym + str[i] +sym
     }
-  
   }
   console.log(str.join('\n'))
 </script>
@@ -935,14 +913,14 @@
       console.log('NO')
     }
 </script>
-<script type="x" id="narcissistics">
+<script type="" id="narcissistics">
    for(let i = 1; i <= 1000;i++){
     var arr = i.toString().split('')
     var sum = 0
     for(let i in arr){
       sum+= Math.pow(+arr[i],3)
     }
-    if(i === sum){
+    if(i === sum&& i>1){
       console.log(i)
     }else{
      
@@ -981,7 +959,7 @@
         sum+=i
       }
     }
-    sum==n? console.log(n):null
+    sum==n&&sum>1? console.log(n):null
    
   }
   
@@ -1026,7 +1004,7 @@
    var n = prompt('n')
     console.log(n+'')
 </script>
-<script type="" id="lcf&lcm">
+<script type="x" id="lcf&lcm">
     var x = +prompt('x')
     var y = +prompt('y')
     var lcf , lcm
