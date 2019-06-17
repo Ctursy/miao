@@ -769,7 +769,7 @@
    }
    fight(N,X)
 </script>
-<script type="" id="ch0105/38">
+<script type="z" id="ch0105/38">
   var n = +prompt('多项式最高次幂')
   for(let j = 0;j<n;j++){
     var c = +prompt('次项最高次幂')
@@ -907,4 +907,128 @@
       console.log(coin + per_day*re_day)
     }
   
+</script>
+<script type="x" id="7">
+    var n = +prompt('n')
+    console.log( (n % 7==0 && n >= 7)||(n.toString().indexOf('7')!=-1)?'YES':'NO' )
+</script>
+<script type="x" id="sort">
+  var arr = []
+   for(let i = 0;i < 3;i++){
+    var n = +prompt('n'+i)
+    arr.push(n)
+   }
+   for(let i in arr.sort()){
+     console.log(arr[])
+   }
+</script>
+<script type="x" id="narcissistic">
+    var n = prompt('narcissistic')
+    var arr = n.split('')
+    var sum = 0
+    for(let i in arr){
+      sum+= Math.pow(+arr[i],3)
+    }
+    if(n*1 === sum){
+      console.log('YES')
+    }else{
+      console.log('NO')
+    }
+</script>
+<script type="x" id="narcissistics">
+   for(let i = 1; i <= 1000;i++){
+    var arr = i.toString().split('')
+    var sum = 0
+    for(let i in arr){
+      sum+= Math.pow(+arr[i],3)
+    }
+    if(i === sum){
+      console.log(i)
+    }else{
+     
+    }
+   }
+</script>
+<script type="x" id="palindrom">
+ var n = prompt('palindrom')
+ n==n.split('').reverse().join('')?console.log('YES'):console.log('NO')
+</script>
+<script type="x" id="weekday">
+  var y = +prompt('年份')
+  var m = +prompt('月份')
+  var d = new Date()
+  d.setYear(y)
+  d.setMonth(m-1)
+  d.setDate(1)
+  console.log(d.getDay())
+</script>
+<script type="x" id="complete-number">
+  var n = +prompt('n')
+  var sum = 0
+  for (let i = 1; i < n ; i ++){
+    if(n%i==0){
+      sum+=i
+    }
+  }
+  console.log(sum==n?'YES':'NO')
+</script>
+<script type="x" id="prime">
+  var n = +prompt('n')
+  var is_prompt = true
+  if(n<2){
+    console.log('NO')
+  }else if(n==2){
+    console.log('YES')
+  }else{
+    for (let i = 2; i < n ; i ++){
+    
+      if(n%i==0){
+        console.log('No')
+        is_prompt = false
+        break
+      }
+    }
+    is_prompt?console.log('Yes'):null
+  }
+  
+</script>
+<script type="x" id="primes">
+  for(let n = 2;n<100;n++){
+    if(n==2){
+      console.log(n)
+    }else{
+      var is_prompt = true
+      for (let i = 2; i < n ; i ++){
+        if(n%i==0){
+          is_prompt = false
+          break
+        }
+      }
+      is_prompt?console.log(n):null
+    }
+  }
+</script>
+<script type="x" id="itob">
+   var n = prompt('n')
+    console.log(n+'')
+</script>
+<script type="x" id="lcf&lcm">
+    var x = +prompt('x')
+    var y = +prompt('y')
+    var lcf , lcm
+    for(let i = 1;i<=(x>y?y:x);i++){
+      if(x%i==0&&y%i==0){
+        lcf ? (lcf > i ? null : lcf = i) : lcf = i
+      }
+    }
+    for(let i = x<y?y:x;i <= x * y;i++){
+      if(i%x==0&&i%y==0){
+        lcm ? (lcm < i ? null : lcm = i): lcm = i
+      }
+    }
+    console.log(lcf,lcm)
+ </script>
+<script type="x" id="sqrt">
+  var n = +prompt('n')
+  console.log(Math.sqrt(n).toFixed(3))
 </script>
