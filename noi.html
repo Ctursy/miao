@@ -962,7 +962,7 @@
   d.setDate(1)
   console.log(d.getDay())
 </script>
-<script type="" id="complete-numbers">
+<script type="x" id="complete-number">
   var n = +prompt('n')
   var sum = 0
   for (let i = 1; i < n ; i ++){
@@ -972,7 +972,21 @@
   }
   console.log(sum==n?'YES':'NO')
 </script>
-<script type="x" id="prime">
+<script type="" id="complete-numbers">
+  for(let n=0;n<1000;n++){
+    // var n = +prompt('n')
+    var sum = 1
+    for (let i = 2; i < n ; i ++){
+      if(n%i==0){
+        sum+=i
+      }
+    }
+    sum==n? console.log(n):null
+   
+  }
+  
+  </script>
+<script type="z" id="prime">
   var n = +prompt('n')
   var is_prompt = true
   if(n<2){
