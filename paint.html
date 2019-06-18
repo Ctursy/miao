@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="692.8203230275509" height="400"></canvas>
+</body>
+<script>
+  var canvas = document.querySelector('canvas')
+  canvas.style.imageRendering = 'pixelated'
+  var ctx = canvas.getContext('2d')
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+  /**
+   * YOUR TASK
+画图的题：
+画一条实线
+画一条一个实点一个空点的虚线
+画一条两个实点两个空点的虚线
+画一条三个实点两个空点的虚线
+画一条45度的斜线
+画一条跨越画布左上角和右下角的对角线
+画一个空心矩形
+画一个实心矩形
+画一个rgb色彩空间的某一面
+画一个空心的圆
+画一个实心的圆
+画一个大小合适的sin(x)的图像
+   */
+</script>
+<script>
+  // YOUR CODE GOES BELOW
+  
+  function line(start_x,start_y,dir,dash_space,length,deg,color){//画直线  （起点横坐标，起点纵坐标，方向，虚线跨度,长度,颜色）
+    if(deg){
+      var offset = Math.tan(Math.PI*deg/180);
+      var hypotenuse = length*Math.cos(Math.PI*deg/180);
+      for(let i = 0 ; i<hypotenuse ;dash_space?i+=(dash_space+1):i++){
+        dot(start_x+i,start_y+i*offset,color)
+      }
+    }else{
+      for(let i = 0 ; i<length ;dash_space?i+=(dash_space+1):i++){
+        if(dir=='col'){
+          dot(start_x,start_y+i,color)
+        }
+        if(dir=='row'){
+          dot(start_x+i,start_y,color)
+        }
+      }
+    }
+  }
+  // 生成渐变颜色  (起始颜色，结束颜色，过渡份数，第i份)
+  function color_Gradual(color1,color2,pice,i){
+      if(color1.length==7){
+       var c1 = color1.split('')
+       c1.shift()
+       var c1_r = parseInt(''+c1[0]+c1[1],16)
+       var c1_g = parseInt(''+c1[2]+c1[3],16)
+       var  c1_b = parseInt(''+c1[4]+c1[5],16)
+      }else if(color1.length==4){
+        var c1 = color1.split('')
+        c1.shift()
+        var c1_r = parseInt(''+c1[0]+c1[0],16)
+        var c1_g = parseInt(''+c1[1]+c1[1],16)
+        var c1_b = parseInt(''+c1[2]+c1[2],16)
+      }
+      if(color2.length==7){
+       var c2 = color2.split('')
+       c2.shift()
+       var c2_r = parseInt(''+c2[0]+c2[1],16)
+       var c2_g = parseInt(''+c2[2]+c2[3],16)
+       var  c2_b = parseInt(''+c2[4]+c2[5],16)
+      }else if(color2.length==4){
+        var c2 = color2.split('')
+        c2.shift()
+        var c2_r = parseInt(''+c2[0]+c2[0],16)
+        var c2_g = parseInt(''+c2[1]+c2[1],16)
+        var c2_b = parseInt(''+c2[2]+c2[2],16)
+      }
+      // console.log(c1_r,c1_g,c1_b,c2_r,c2_g,c2_b)   +(c1_r-c2_r)/pice*i
+      // result_r = (+Math.abs(c1_r+(c1_r-c2_r)/pice*i).toFixed(0)).toString(16)
+      // result_g = (+Math.abs(c1_g+(c1_g-c2_g)/pice*i).toFixed(0)).toString(16)
+      // result_b = (+Math.abs(c1_b+(c1_b-c2_b)/pice*i).toFixed(0)).toString(16)
+      result_r = c1_r==c2_r?((+c1_r.toFixed(0))).toString(16): (+Math.abs(c1_r>c2_r?(c2_r+(c1_r-c2_r)/pice*i):(c1_r+(c2_r-c1_r)/pice*i)).toFixed(0)).toString(16)
+
+      result_g = c1_g==c2_g?((+c1_g.toFixed(0))).toString(16): (+Math.abs(c1_g>c2_g?(c2_g+(c1_g-c2_g)/pice*i):(c1_g+(c2_g-c1_g)/pice*i)).toFixed(0)).toString(16)
+
+      result_b = c1_b==c2_b?((+c1_b.toFixed(0))).toString(16): (+Math.abs(c1_b>c2_b?(c2_b+(c1_b-c2_b)/pice*i):(c1_b+(c2_b-c1_b)/pice*i)).toFixed(0)).toString(16)
+
+      return('#'+(result_r.length<2?'0'+result_r:result_r )+ (result_g.length<2?'0'+result_g:result_g )+(result_b.length<2?'0'+result_b:result_b))
+  }
+  // color_Gradual('#333333','#777777')
+  //画矩形，（起始点，宽，高，虚实，颜色,渐变颜色1，渐变颜色2）
+  function block(start_x,start_y,width,height,dash,color,color_1,color_2){
+    if(dash){
+      line(start_x,start_y,'row',0,width,0,'black')
+      line(start_x,start_y,'col',0,height,0,'black')
+      line(start_x+width,start_y,'col',0,height,0,'black')
+      line(start_x,start_y+height,'row',0,width,0,'black')
+    }else{
+      if(color_1&&color_2){
+        var count = 0
+        for(let i = start_x;i<= start_x+width;i++){
+            for(let k = start_y;k<= start_y+height;k++){
+              count++
+              if(count==1){
+                color = color_Gradual(color_1,color_2,width*height,((i-start_x)?(i-start_x):1)*((k-start_y)?(k-start_y):1))
+                count = 0
+              }
+              dot(i,k,color)
+            }
+          }
+      }else{
+          for(let i = start_x;i<= start_x+width;i++){
+            for(let k = start_y;k<= start_y+height;k++){
+              dot(i,k,color)
+            }
+          }
+      }
+      
+    }
+  }
+//画圆 圆心坐标 半径 颜色
+  function circle(orgin_x,orgin_y,r,dash,color){
+    if(dash){
+     for(let i = 0 ; i<=360;i++){
+      dot(Math.cos(i/180*Math.PI)*r+orgin_x,Math.sin(i/180*Math.PI)*r+orgin_y,color)
+     }
+    }else{
+      for(let i = 0 ; i<=360;i++){
+       for(let k=0;k<r;k++){
+          circle(orgin_x,orgin_y,k,true,color)
+       }
+      // dot(Math.cos(i/180*Math.PI)*r+orgin_x,Math.sin(i/180*Math.PI)*r+orgin_y)
+     }
+    }
+  }
+  //sin曲线  起始坐标  周期数 峰值 颜色
+  function sin_line(start_x,start_y,t,h,color){
+    for( let i = 0 ;i< 360*t;i++){
+      dot((start_x+i),-Math.sin(i*Math.PI/180)*h+start_y,color)
+    }
+  }
+
+  line(10,10,'row',0,500,0,'#000')//
+  line(10,30,'row',1,500,0,'#000')//隔一虚线
+  line(10,50,'row',3,500,0,'#000')//隔三虚线
+  line(10,50,'row',0,400,45,'red')//45度斜线
+  // dot(10.5,10.5,'red')
+  line(0,0,'row',0,800,30,'#000')//对角线
+  block(100,100,100,200,true,'#333')//空心矩形
+  block(250,100,100,200,false,'#333')//实心矩形
+  block(400,100,100,100,false,'','#4575d4','#ffff73')//渐变实心矩形
+  circle( 100,100,50,true,'#777' )//空心圆
+  circle( 300,100,50,false,'#eee' )//实心圆
+  sin_line(100,100,10,100 ,'red')//sin
+</script>
+</html>
