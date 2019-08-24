@@ -1,0 +1,80 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html body {
+  margin: 0;
+  padding: 0;
+  background: #333;
+  height: 100%;
+}
+
+html body .title {
+  color: #ffffff;
+  padding-left: 20px;
+}
+
+html body .board {
+  display: flow-root;
+  width: 500px;
+}
+
+html body .board .block {
+  background: #eee;
+  border: 2px solid #000000;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  float: left;
+  position: relative;
+  font-size: 20px;
+  text-align: center;
+}
+
+html body .time {
+  position: absolute;
+  top: 25px;
+  left: 300px;
+  font-size: 30px;
+  color: #fff;
+}
+
+.gray {
+  background: #999 !important;
+}
+
+.blank {
+  background: #778bf8 !important;
+}
+
+.dead {
+  background: #778bf8 !important;
+}
+
+.warm {
+  background-image: url(./img/sweep.png) !important;
+  background-size: 100% 100% !important;
+}
+
+.flag {
+  background-image: url(./img/flag_red.png) !important;
+  background-size: 100% 100% !important;
+}
+
+.eflag {
+  background: #778bf8 !important;
+  background-image: url(./img/flag_red.png) !important;
+  background-size: 100% 100% !important;
+}
+
+.boom {
+  background: rgba(255, 165, 165, 0.849) !important;
+  background-image: url(./img/sweep.png) !important;
+  background-size: 100% 100% !important;
+}
+
+.num {
+  background: #ddd;
+}
+/*# sourceMappingURL=sweep.css.map */

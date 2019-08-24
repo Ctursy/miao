@@ -1,0 +1,88 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    body{
+        margin: 0;
+        padding: 0;
+        background: #333;
+        height: 100%;
+        .title{
+            color: #ffffff;
+            padding-left: 20px
+        }
+        .board{
+            display: flow-root;
+            width: 500px;
+            // flex-wrap: wrap;
+            .block{
+                background: #eee;
+                border: 2px solid #000000;
+                box-sizing: border-box;
+                float: left;
+                position: relative;
+                font-size: 20px;
+                text-align: center;
+                
+            }
+            // .block::before{
+            //     width: 90%;
+            //     height: 90%;
+            //     position: absolute;
+            //     left: 5%;
+            //     top: 5%;
+            //     content: '';
+            //     box-shadow: 0 0 10px 3px #ccc;
+            //     background: #fff;
+            //     transition: .5s;
+               
+            // }
+            // .block:hover:before{
+            //     background: rgba;
+            //     color: #fff;
+            //     transition: .5s;
+            //     cursor: pointer;
+            // }
+            // border: 10px
+        }
+        .time{
+            position: absolute;
+            top: 25px;
+            left: 300px;
+            font-size: 30px;
+            color: #fff;
+        }
+    }
+}
+.gray{
+    background: #999!important
+}
+.blank{
+    background: rgb(119, 139, 248)!important
+}
+.dead{
+    background: rgb(119, 139, 248)!important
+}
+.warm{
+    background-image: url(./img/sweep.png)!important;
+    background-size: 100% 100%!important;
+    // background: red!important
+}
+.flag{
+   background-image: url(./img/flag_red.png)!important;
+   background-size: 100% 100%!important;
+}
+.eflag{
+    background: rgb(119, 139, 248)!important;
+    background-image: url(./img/flag_red.png)!important;
+    background-size: 100% 100%!important;
+  
+ }
+ .boom{
+    background: rgba(255, 165, 165, 0.849)!important;
+    background-image: url(./img/sweep.png)!important;
+    background-size: 100% 100%!important;  
+ }
+.num{
+    background: #ddd
+}
